@@ -85,7 +85,7 @@ const HeroSection = () => {
 
           {/* Stats */}
           <div 
-            className="grid grid-cols-3 gap-6 max-w-2xl mx-auto pt-12 opacity-0 animate-fade-up"
+            className="grid grid-cols-3 gap-12 max-w-3xl mx-auto pt-12 opacity-0 animate-fade-up w-full"
             style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
           >
             {stats.map((stat, index) => (
