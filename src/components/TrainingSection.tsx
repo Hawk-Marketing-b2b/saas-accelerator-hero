@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { Target, Heart, BookOpen, Award, Zap, BarChart3 } from "lucide-react";
+import { Target, Heart, BookOpen, Award, Zap, BarChart3, ArrowRight } from "lucide-react";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ContactForm from "./ContactForm";
+import ShinyButton from "./ui/shiny-button";
 
 const commercialFeatures = [
   "Script de vendas estratégico",
@@ -23,6 +27,9 @@ const stats = [
 ];
 
 const TrainingSection = () => {
+  const [isCommercialDialogOpen, setIsCommercialDialogOpen] = useState(false);
+  const [isCsDialogOpen, setIsCsDialogOpen] = useState(false);
+
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Gradient Background with Blur */}
@@ -83,7 +90,7 @@ const TrainingSection = () => {
               Capacitamos seu time comercial com técnicas avançadas de vendas consultivas específicas para software B2B.
             </p>
 
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-6">
               {commercialFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-[#0707ed]" />
@@ -91,6 +98,11 @@ const TrainingSection = () => {
                 </li>
               ))}
             </ul>
+
+            <ShinyButton onClick={() => setIsCommercialDialogOpen(true)} className="w-full">
+              Aumente a sua conversão
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </ShinyButton>
           </div>
 
           {/* CS Training Card */}
@@ -113,7 +125,7 @@ const TrainingSection = () => {
               Transformamos seu time de CS em especialistas em retenção e expansão de receita.
             </p>
 
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-6">
               {csFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-3">
                   <span className="w-2 h-2 rounded-full bg-purple-400" />
@@ -121,6 +133,11 @@ const TrainingSection = () => {
                 </li>
               ))}
             </ul>
+
+            <ShinyButton onClick={() => setIsCsDialogOpen(true)} className="w-full">
+              Aumente o seu LTV
+              <ArrowRight className="w-5 h-5 ml-2" />
+            </ShinyButton>
           </div>
         </motion.div>
 
@@ -149,6 +166,30 @@ const TrainingSection = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Commercial Dialog */}
+      <Dialog open={isCommercialDialogOpen} onOpenChange={setIsCommercialDialogOpen}>
+        <DialogContent className="sm:max-w-md bg-background/95 backdrop-blur-lg border-white/10">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-foreground">
+              Treinamento Comercial
+            </DialogTitle>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsCommercialDialogOpen(false)} />
+        </DialogContent>
+      </Dialog>
+
+      {/* CS Dialog */}
+      <Dialog open={isCsDialogOpen} onOpenChange={setIsCsDialogOpen}>
+        <DialogContent className="sm:max-w-md bg-background/95 backdrop-blur-lg border-white/10">
+          <DialogHeader>
+            <DialogTitle className="text-xl font-bold text-foreground">
+              Treinamento CS
+            </DialogTitle>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsCsDialogOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
