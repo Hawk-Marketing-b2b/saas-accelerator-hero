@@ -10,7 +10,7 @@ interface StatCardProps {
 const StatCard = ({ value, label, icon: Icon, delay = 0 }: StatCardProps) => {
   return (
     <div 
-      className="bg-card/60 backdrop-blur-sm rounded-2xl p-6 border border-border/30 hover:border-border/50 transition-all duration-300 hover:translate-y-[-2px] opacity-0 animate-fade-up flex flex-col items-center text-center"
+      className="bg-transparent backdrop-blur-md rounded-2xl p-6 border border-white/60 hover:border-white/80 transition-all duration-300 hover:translate-y-[-2px] opacity-0 animate-fade-up flex flex-col items-center text-center"
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
       <div className="mb-4">
