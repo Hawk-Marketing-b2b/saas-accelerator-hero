@@ -14,13 +14,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center">
+            <div className="w-10 h-10 rounded-lg accent-gradient flex items-center justify-center flex-shrink-0">
               <span className="font-display font-bold text-primary-foreground text-lg">A</span>
             </div>
-            <div className="flex flex-col leading-tight">
-              <span className="font-display font-bold text-foreground text-sm">Acelera</span>
-              <span className="font-display font-semibold text-primary text-sm">SaaS</span>
-            </div>
+            <span className="font-display font-bold text-foreground text-sm whitespace-nowrap">
+              Acelera<span className="text-primary ml-1">SaaS</span>
+            </span>
           </a>
 
           {/* Navigation */}
