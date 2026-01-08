@@ -62,10 +62,7 @@ const ComparisonSection = () => {
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Por que escolher a{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">
-              Acelera SaaS?
-            </span>
+            Por que escolher a Acelera SaaS?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Compare e descubra a diferença de trabalhar com especialistas em SaaS B2B
