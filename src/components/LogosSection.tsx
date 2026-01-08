@@ -12,7 +12,7 @@ const LogosSection = () => {
   ];
 
   return (
-    <section className="py-16 px-4">
+    <section className="py-16 px-4 bg-black">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
