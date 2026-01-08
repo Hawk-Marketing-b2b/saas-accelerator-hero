@@ -36,9 +36,6 @@ const HeroSection = () => {
             <span className="text-sm font-medium text-muted-foreground">
               O maior ecossistema de vendas para SaaS
             </span>
-            <Button variant="ghost" size="sm" className="h-7 px-3 text-xs font-semibold bg-background/80 hover:bg-background text-foreground rounded-full">
-              Saiba mais →
-            </Button>
           </div>
 
           {/* Headline */}
