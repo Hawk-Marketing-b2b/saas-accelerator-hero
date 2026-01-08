@@ -59,8 +59,8 @@ const MethodSection = () => {
               className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 flex items-start gap-5"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 border border-purple-500/30 flex items-center justify-center shrink-0">
-                <step.icon className="w-5 h-5 text-purple-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#0707ed]/15 border border-[#0707ed]/30 flex items-center justify-center shrink-0">
+                <step.icon className="w-5 h-5 text-[#0707ed]" />
               </div>
 
               {/* Number */}
@@ -89,11 +89,11 @@ const MethodSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="flex justify-center mt-8"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-purple-500/30 bg-purple-500/10">
-            <Sparkles className="w-4 h-4 text-purple-400" />
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#0707ed]/30 bg-[#0707ed]/10">
+            <Sparkles className="w-4 h-4 text-[#0707ed]" />
             <span className="text-sm">
               <span className="text-muted-foreground">Resultado:</span>{" "}
-              <span className="text-purple-400 font-medium">Crescimento Exponencial</span>
+              <span className="text-[#0707ed] font-medium">Crescimento Exponencial</span>
             </span>
           </div>
         </motion.div>
