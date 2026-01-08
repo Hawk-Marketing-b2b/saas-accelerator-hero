@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Search, Megaphone, Settings, Heart, Sparkles } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ContactForm from "@/components/ContactForm";
 
 const steps = [
   {
@@ -29,6 +33,8 @@ const steps = [
 ];
 
 const MethodSection = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <section className="py-24 px-4 bg-black">
       <div className="container mx-auto max-w-3xl">
@@ -39,6 +45,15 @@ const MethodSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
+          {/* Result Badge - Above title */}
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#0707ed]/30 bg-[#0707ed]/10 mb-6">
+            <Sparkles className="w-4 h-4 text-[#0707ed]" />
+            <span className="text-sm">
+              <span className="text-muted-foreground">Resultado:</span>{" "}
+              <span className="text-[#0707ed] font-medium">Crescimento Exponencial</span>
+            </span>
+          </div>
+
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             O Método Acelera SaaS
           </h2>
@@ -81,7 +96,7 @@ const MethodSection = () => {
           ))}
         </div>
 
-        {/* Result Badge */}
+        {/* CTA Button */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -89,15 +104,21 @@ const MethodSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="flex justify-center mt-8"
         >
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#0707ed]/30 bg-[#0707ed]/10">
-            <Sparkles className="w-4 h-4 text-[#0707ed]" />
-            <span className="text-sm">
-              <span className="text-muted-foreground">Resultado:</span>{" "}
-              <span className="text-[#0707ed] font-medium">Crescimento Exponencial</span>
-            </span>
-          </div>
+          <Button variant="hero" size="lg" onClick={() => setIsFormOpen(true)}>
+            Falar com Especialista
+          </Button>
         </motion.div>
       </div>
+
+      {/* Contact Form Dialog */}
+      <Dialog open={isFormOpen} onOpenChange={setIsFormOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Fale com um Especialista</DialogTitle>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsFormOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };
