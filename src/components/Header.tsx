@@ -1,4 +1,4 @@
-import { Button } from "@/components/ui/button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 
 const Header = () => {
   const navItems = [
@@ -36,9 +36,9 @@ const Header = () => {
           </nav>
 
           {/* CTA */}
-          <Button variant="hero" size="default" className="hidden sm:flex">
+          <ShinyButton className="hidden sm:flex">
             Falar com Especialista
-          </Button>
+          </ShinyButton>
         </div>
       </div>
     </header>
