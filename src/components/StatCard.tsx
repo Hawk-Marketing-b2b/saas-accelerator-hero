@@ -14,7 +14,8 @@ const StatCard = ({ value, label, icon: Icon, delay = 0 }: StatCardProps) => {
       style={{ animationDelay: `${delay}ms`, animationFillMode: 'forwards' }}
     >
       <div 
-        className="font-display text-4xl lg:text-5xl font-bold mb-1 bg-gradient-to-t from-black/40 to-white bg-clip-text text-transparent"
+        className="font-display text-5xl lg:text-7xl font-bold mb-2 bg-gradient-to-t from-black/40 to-white bg-clip-text text-transparent opacity-0 animate-fade-up"
+        style={{ animationDelay: `${delay + 100}ms`, animationFillMode: 'forwards' }}
       >
         {value}
       </div>
