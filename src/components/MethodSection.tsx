@@ -1,44 +1,37 @@
-import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Megaphone, Settings, TrendingUp } from "lucide-react";
-import diagnosticoVideo from "@/assets/diagnostico-video.mp4";
+import { Search, Megaphone, Settings, Heart, Sparkles } from "lucide-react";
 
-const tabs = [
+const steps = [
   {
-    id: "diagnostico",
-    label: "Diagnóstico e Estratégia",
+    number: "01",
     icon: Search,
-    video: diagnosticoVideo,
-    content: "Imersão profunda no seu negócio, mapeamento da jornada do cliente B2B e definição de metas claras.",
+    title: "Diagnóstico e Estratégia",
+    description: "Imersão profunda no seu negócio, mapeamento da jornada do cliente B2B e definição de metas claras.",
   },
   {
-    id: "demanda",
-    label: "Geração de Demanda",
+    number: "02",
     icon: Megaphone,
-    content: "Conteúdo de Geração de Demanda será inserido aqui.",
+    title: "Geração de Demanda Qualificada",
+    description: "Atraímos clientes ideais através de canais estratégicos com nossa tecnologia própria de I.A.",
   },
   {
-    id: "otimizacao",
-    label: "Otimização da Máquina de Vendas",
+    number: "03",
     icon: Settings,
-    content: "Conteúdo de Otimização da Máquina de Vendas será inserido aqui.",
+    title: "Otimização da Máquina de Vendas",
+    description: "Implementação de CRM, treinamento comercial e capacitação do time de vendas.",
   },
   {
-    id: "retencao",
-    label: "Retenção e Expansão (LTV)",
-    icon: TrendingUp,
-    content: "Conteúdo de Retenção e Expansão (LTV) será inserido aqui.",
+    number: "04",
+    icon: Heart,
+    title: "Retenção e Expansão (LTV)",
+    description: "Preparamos seu time de CS para sucesso do cliente e maximização do Life-Time Value.",
   },
 ];
 
 const MethodSection = () => {
-  const [activeTab, setActiveTab] = useState(tabs[0].id);
-
-  const activeContent = tabs.find((tab) => tab.id === activeTab);
-
   return (
     <section className="py-24 px-4 bg-black">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -54,55 +47,54 @@ const MethodSection = () => {
           </p>
         </motion.div>
 
-        {/* Tabs Layout */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex flex-col lg:flex-row gap-6"
-        >
-          {/* Tab Buttons - Lateral on desktop, stacked on mobile */}
-          <div className="flex flex-col gap-3 lg:w-72 shrink-0">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-3 text-left px-6 py-4 rounded-2xl border transition-all duration-300 ${
-                  activeTab === tab.id
-                    ? "border-white/30 bg-[#0707ed]/15 backdrop-blur-[35px] text-foreground"
-                    : "border-white/10 bg-transparent text-muted-foreground hover:border-white/20 hover:bg-white/5"
-                }`}
-              >
-                <tab.icon className="w-5 h-5 shrink-0" />
-                <span className="font-medium">{tab.label}</span>
-              </button>
-            ))}
-          </div>
-
-          {/* Content Box - Same style as LogosSection */}
-          <div className="flex-1 rounded-3xl border border-white/10 backdrop-blur-[35px] p-8 md:p-12 min-h-[300px]">
+        {/* Steps List */}
+        <div className="flex flex-col gap-4">
+          {steps.map((step, index) => (
             <motion.div
-              key={activeTab}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="flex flex-col items-start"
+              key={step.number}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 flex items-start gap-5"
             >
-              {activeContent?.video && (
-                <video
-                  src={activeContent.video}
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-32 h-32 object-cover rounded-2xl mb-6"
-                />
-              )}
-              <p className="text-muted-foreground text-lg">
-                {activeContent?.content}
-              </p>
+              {/* Icon */}
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-purple-500/20 to-purple-600/10 border border-purple-500/30 flex items-center justify-center shrink-0">
+                <step.icon className="w-5 h-5 text-purple-400" />
+              </div>
+
+              {/* Number */}
+              <span className="text-3xl font-bold text-white/20 shrink-0">
+                {step.number}
+              </span>
+
+              {/* Content */}
+              <div className="flex flex-col gap-1">
+                <h3 className="text-lg font-semibold text-foreground">
+                  {step.title}
+                </h3>
+                <p className="text-muted-foreground text-sm leading-relaxed">
+                  {step.description}
+                </p>
+              </div>
             </motion.div>
+          ))}
+        </div>
+
+        {/* Result Badge */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true, margin: "-50px" }}
+          className="flex justify-center mt-8"
+        >
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-purple-500/30 bg-purple-500/10">
+            <Sparkles className="w-4 h-4 text-purple-400" />
+            <span className="text-sm">
+              <span className="text-muted-foreground">Resultado:</span>{" "}
+              <span className="text-purple-400 font-medium">Crescimento Exponencial</span>
+            </span>
           </div>
         </motion.div>
       </div>
