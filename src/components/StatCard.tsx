@@ -19,7 +19,10 @@ const StatCard = ({ value, label, icon: Icon, delay = 0 }: StatCardProps) => {
       >
         {value}
       </div>
-      <div className="text-muted-foreground text-sm font-medium">
+      <div 
+        className="text-muted-foreground text-sm font-medium opacity-0 animate-fade-up"
+        style={{ animationDelay: `${delay + 200}ms`, animationFillMode: 'forwards' }}
+      >
         {label}
       </div>
     </div>
