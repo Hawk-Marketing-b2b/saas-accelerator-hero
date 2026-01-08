@@ -53,7 +53,7 @@ const TrainingSection = () => {
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Treinamento{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0707ed] to-purple-500">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#0707ed] to-cyan-400">
               Comercial & CS
             </span>
           </h2>
@@ -108,11 +108,11 @@ const TrainingSection = () => {
           {/* CS Training Card */}
           <div className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-8">
             <div className="flex items-center gap-4 mb-6">
-              <div className="w-12 h-12 rounded-xl bg-purple-500/15 border border-purple-500/30 flex items-center justify-center">
-                <Heart className="w-5 h-5 text-purple-400" />
+              <div className="w-12 h-12 rounded-xl bg-[#0707ed]/15 border border-[#0707ed]/30 flex items-center justify-center">
+                <Heart className="w-5 h-5 text-[#0707ed]" />
               </div>
               <div>
-                <span className="text-xs text-purple-400 uppercase tracking-wider font-medium">
+                <span className="text-xs text-[#0707ed] uppercase tracking-wider font-medium">
                   Customer Success
                 </span>
                 <h3 className="text-xl font-bold text-foreground">
@@ -128,7 +128,7 @@ const TrainingSection = () => {
             <ul className="space-y-3 mb-6">
               {csFeatures.map((feature) => (
                 <li key={feature} className="flex items-center gap-3">
-                  <span className="w-2 h-2 rounded-full bg-purple-400" />
+                  <span className="w-2 h-2 rounded-full bg-[#0707ed]" />
                   <span className="text-foreground text-sm">{feature}</span>
                 </li>
               ))}
