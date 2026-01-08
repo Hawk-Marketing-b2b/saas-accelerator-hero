@@ -7,7 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { StarButton } from "@/components/ui/star-button";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import StatCard from "./StatCard";
 import ContactForm from "./ContactForm";
 import AuroraBackground from "./AuroraBackground";
@@ -66,13 +66,13 @@ const HeroSection = () => {
             className="flex justify-center pt-4 opacity-0 animate-fade-up"
             style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
           >
-            <StarButton
+            <ShinyButton
               onClick={() => setIsFormOpen(true)}
               className="group"
             >
               Quero Acelerar Meu SaaS
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </StarButton>
+            </ShinyButton>
           </div>
 
           {/* Stats */}
