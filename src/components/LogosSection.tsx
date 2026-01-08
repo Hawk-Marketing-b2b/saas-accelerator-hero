@@ -25,7 +25,7 @@ const LogosSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-8 md:p-12 overflow-hidden"
+          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-12 md:p-16 lg:p-20 overflow-hidden"
         >
           {/* Rocket background image */}
           <div 
