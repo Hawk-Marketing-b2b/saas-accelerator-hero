@@ -19,9 +19,12 @@ const LogosSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-[35px] p-8 md:p-12"
+          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-8 md:p-12 overflow-hidden"
         >
-          <div className="text-center mb-10">
+          {/* Radial gradient background */}
+          <div className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_-50%,#6366f136_40%,transparent_100%)]" />
+          
+          <div className="relative z-10 text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               +400 empresas SaaS
             </h2>
@@ -30,7 +33,7 @@ const LogosSection = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
+          <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
             {logos.map((logo, index) => (
               <motion.div
                 key={index}
