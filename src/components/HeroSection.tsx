@@ -1,4 +1,4 @@
-import { ArrowRight, Play, Calendar, Rocket, DollarSign } from "lucide-react";
+import { ArrowRight, Calendar, Rocket, DollarSign } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -7,6 +7,7 @@ import {
   DialogHeader,
   DialogTitle,
 } from "@/components/ui/dialog";
+import { StarButton } from "@/components/ui/star-button";
 import StatCard from "./StatCard";
 import ContactForm from "./ContactForm";
 import AuroraBackground from "./AuroraBackground";
@@ -68,15 +69,13 @@ const HeroSection = () => {
             className="flex justify-center pt-4 opacity-0 animate-fade-up"
             style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
           >
-            <Button 
-              variant="hero" 
-              size="xl" 
-              className="group"
+            <StarButton
               onClick={() => setIsFormOpen(true)}
+              className="group"
             >
               Quero Acelerar Meu SaaS
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
+            </StarButton>
           </div>
 
           {/* Stats */}
