@@ -115,7 +115,7 @@ const ComparisonSection = () => {
               </div>
               <div className="p-4 md:p-6 border-l border-white/10 flex items-center gap-2 bg-purple-500/[0.03]">
                 <Check className="w-4 h-4 text-purple-400 flex-shrink-0" />
-                <span className="text-sm text-purple-300">{row.acelera}</span>
+                <span className="text-sm text-foreground">{row.acelera}</span>
               </div>
             </div>
           ))}
