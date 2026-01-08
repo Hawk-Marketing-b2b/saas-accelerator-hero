@@ -25,8 +25,8 @@ const HeroSection = () => {
       {/* Aurora Background */}
       <AuroraBackground />
 
-      <div className="container mx-auto px-6 lg:px-8 relative z-10 py-32">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
+      <div className="w-full px-4 relative z-10 py-32">
+        <div className="max-w-4xl mx-auto text-center space-y-8 flex flex-col items-center">
           {/* Badge */}
           <div 
             className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-border/50 bg-muted/30 backdrop-blur-sm opacity-0 animate-fade-up"
