@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import rocketBg from "@/assets/rocket-bg.jpg";
 
 const LogosSection = () => {
   // Placeholder logos - these would be replaced with actual client logos
@@ -26,8 +27,11 @@ const LogosSection = () => {
           viewport={{ once: true }}
           className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-8 md:p-12 overflow-hidden"
         >
-          {/* Radial gradient background */}
-          <div className="absolute inset-0 [background:radial-gradient(125%_125%_at_50%_-50%,#6366f136_40%,transparent_100%)]" />
+          {/* Rocket background image */}
+          <div 
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+            style={{ backgroundImage: `url(${rocketBg})` }}
+          />
           
           <div className="relative z-10 text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
