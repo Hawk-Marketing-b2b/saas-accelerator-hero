@@ -45,8 +45,8 @@ interface StarButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> 
 
 export function StarButton({
   children,
-  lightWidth = 110,
-  duration = 3,
+  lightWidth = 200,
+  duration = 4,
   lightColor = "#FAFAFA",
   backgroundColor = "transparent",
   borderWidth = 1,
@@ -79,9 +79,9 @@ export function StarButton({
         ref={pathRef}
         className="pointer-events-none absolute inset-0 rounded-full"
         style={{
-          background: `linear-gradient(90deg, transparent, ${lightColor}, transparent)`,
-          backgroundSize: `${lightWidth}px 100%`,
-          animation: `star-border-spin ${duration}s linear infinite`,
+          background: `linear-gradient(90deg, transparent 0%, transparent 25%, ${lightColor}40 40%, ${lightColor} 50%, ${lightColor}40 60%, transparent 75%, transparent 100%)`,
+          backgroundSize: `${lightWidth}% 100%`,
+          animation: `star-border-spin ${duration}s ease-in-out infinite`,
           padding: borderWidth,
           WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
           WebkitMaskComposite: "xor",
@@ -105,10 +105,10 @@ export function StarButton({
       <style>{`
         @keyframes star-border-spin {
           0% {
-            background-position: -${lightWidth}px 0;
+            background-position: 200% 0;
           }
           100% {
-            background-position: calc(100% + ${lightWidth}px) 0;
+            background-position: -200% 0;
           }
         }
       `}</style>
