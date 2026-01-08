@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/dialog";
 import StatCard from "./StatCard";
 import ContactForm from "./ContactForm";
+import AuroraBackground from "./AuroraBackground";
 
 const HeroSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -20,13 +21,9 @@ const HeroSection = () => {
   ];
 
   return (
-    <section className="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Subtle background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[1000px] h-[1000px] rounded-full bg-primary/8 blur-3xl animate-subtle-pulse" />
-        <div className="absolute bottom-0 left-1/4 w-[600px] h-[600px] rounded-full bg-secondary/5 blur-3xl animate-subtle-pulse" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/3 right-1/4 w-[400px] h-[400px] rounded-full bg-accent/10 blur-3xl animate-subtle-pulse" style={{ animationDelay: '3s' }} />
-      </div>
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
+      {/* Aurora Background */}
+      <AuroraBackground />
 
       <div className="container mx-auto px-6 lg:px-8 relative z-10 py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8">
