@@ -18,14 +18,14 @@ const LogosSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-16 px-4 bg-black">
+    <section className="pt-4 pb-16 px-4 bg-black">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-12 md:p-16 lg:p-20 overflow-hidden"
+          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-16 md:p-20 lg:p-24 overflow-hidden"
         >
           {/* Rocket background image */}
           <div 
