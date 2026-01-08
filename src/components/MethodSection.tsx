@@ -63,7 +63,7 @@ const MethodSection = () => {
                 onClick={() => setActiveTab(tab.id)}
                 className={`text-left px-6 py-4 rounded-2xl border transition-all duration-300 ${
                   activeTab === tab.id
-                    ? "border-white/30 bg-white/10 text-foreground"
+                    ? "border-white/30 bg-[#0707ed]/40 backdrop-blur-[35px] text-foreground"
                     : "border-white/10 bg-transparent text-muted-foreground hover:border-white/20 hover:bg-white/5"
                 }`}
               >
