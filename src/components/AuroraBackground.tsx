@@ -1,16 +1,32 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 
 const AuroraBackground = () => {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [webglSupported, setWebglSupported] = useState(true);
 
   useEffect(() => {
     const container = containerRef.current;
     if (!container) return;
 
+    // Check WebGL support
+    const canvas = document.createElement('canvas');
+    const gl = canvas.getContext('webgl') || canvas.getContext('experimental-webgl');
+    if (!gl) {
+      setWebglSupported(false);
+      return;
+    }
+
+    let renderer: THREE.WebGLRenderer;
+    try {
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+    } catch (e) {
+      setWebglSupported(false);
+      return;
+    }
+
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
 
     renderer.setSize(container.offsetWidth, container.offsetHeight);
     container.appendChild(renderer.domElement);
@@ -116,6 +132,19 @@ const AuroraBackground = () => {
       renderer.dispose();
     };
   }, []);
+
+  // CSS fallback when WebGL is not supported
+  if (!webglSupported) {
+    return (
+      <div 
+        className="absolute inset-0 w-full h-full"
+        style={{ 
+          zIndex: 0,
+          background: 'radial-gradient(ellipse at 50% 0%, rgba(99, 102, 241, 0.3) 0%, rgba(59, 130, 246, 0.2) 30%, transparent 70%)'
+        }}
+      />
+    );
+  }
 
   return (
     <div 
