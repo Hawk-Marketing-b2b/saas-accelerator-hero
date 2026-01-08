@@ -11,7 +11,6 @@ import { ShinyButton } from "@/components/ui/shiny-button";
 import StatCard from "./StatCard";
 import ContactForm from "./ContactForm";
 import AuroraBackground from "./AuroraBackground";
-import rocketBg from "@/assets/rocket-bg.jpg";
 
 const HeroSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -24,12 +23,6 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
-      {/* Rocket Background Image */}
-      <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${rocketBg})` }}
-      />
-      
       {/* Aurora Background */}
       <AuroraBackground />
       
