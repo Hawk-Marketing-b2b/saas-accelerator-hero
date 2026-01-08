@@ -65,7 +65,7 @@ const HeroSection = () => {
 
           {/* CTAs */}
           <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center pt-4 opacity-0 animate-fade-up"
+            className="flex justify-center pt-4 opacity-0 animate-fade-up"
             style={{ animationDelay: '400ms', animationFillMode: 'forwards' }}
           >
             <Button 
@@ -76,10 +76,6 @@ const HeroSection = () => {
             >
               Quero Acelerar Meu SaaS
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-            <Button variant="heroOutline" size="xl" className="group">
-              <Play className="w-5 h-5" />
-              Ver como funciona
             </Button>
           </div>
 
