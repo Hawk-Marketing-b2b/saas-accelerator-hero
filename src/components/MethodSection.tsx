@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Search, Megaphone, Settings, Heart, Sparkles } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { Search, Megaphone, Settings, Heart, Sparkles, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import { ShinyButton } from "@/components/ui/shiny-button";
 import ContactForm from "@/components/ContactForm";
 
 const steps = [
@@ -104,9 +104,10 @@ const MethodSection = () => {
           viewport={{ once: true, margin: "-50px" }}
           className="flex justify-center mt-8"
         >
-          <Button variant="hero" size="lg" onClick={() => setIsFormOpen(true)}>
-            Falar com Especialista
-          </Button>
+          <ShinyButton onClick={() => setIsFormOpen(true)} className="group">
+            Quero Acelerar Meu SaaS
+            <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          </ShinyButton>
         </motion.div>
       </div>
 
