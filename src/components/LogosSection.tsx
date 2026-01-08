@@ -21,10 +21,10 @@ const LogosSection = () => {
     <section className="pt-4 pb-16 px-4 bg-black">
       <div className="container mx-auto max-w-5xl">
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, margin: "-100px" }}
           className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-16 md:p-20 lg:p-24 overflow-hidden"
         >
           {/* Rocket background image */}
