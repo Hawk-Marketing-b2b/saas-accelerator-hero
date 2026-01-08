@@ -1,13 +1,15 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Search, Megaphone, Settings, TrendingUp } from "lucide-react";
+import diagnosticoVideo from "@/assets/diagnostico-video.mp4";
 
 const tabs = [
   {
     id: "diagnostico",
     label: "Diagnóstico e Estratégia",
     icon: Search,
-    content: "Conteúdo de Diagnóstico e Estratégia será inserido aqui.",
+    video: diagnosticoVideo,
+    content: "Imersão profunda no seu negócio, mapeamento da jornada do cliente B2B e definição de metas claras.",
   },
   {
     id: "demanda",
@@ -85,10 +87,18 @@ const MethodSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
+              className="flex flex-col items-start"
             >
-              <h3 className="text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {activeContent?.label}
-              </h3>
+              {activeContent?.video && (
+                <video
+                  src={activeContent.video}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-32 h-32 object-cover rounded-2xl mb-6"
+                />
+              )}
               <p className="text-muted-foreground text-lg">
                 {activeContent?.content}
               </p>
