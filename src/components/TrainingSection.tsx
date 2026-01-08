@@ -155,7 +155,7 @@ const TrainingSection = () => {
                 <div className="w-12 h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-4">
                   <stat.icon className="w-5 h-5 text-[#0707ed]" />
                 </div>
-                <div className="text-2xl font-bold text-[#0707ed] mb-1">
+                <div className="text-2xl font-bold text-foreground mb-1">
                   {stat.value}
                 </div>
                 <div className="text-sm text-muted-foreground">
