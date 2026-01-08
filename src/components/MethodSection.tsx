@@ -1,25 +1,30 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { Search, Megaphone, Settings, TrendingUp } from "lucide-react";
 
 const tabs = [
   {
     id: "diagnostico",
     label: "Diagnóstico e Estratégia",
+    icon: Search,
     content: "Conteúdo de Diagnóstico e Estratégia será inserido aqui.",
   },
   {
     id: "demanda",
     label: "Geração de Demanda",
+    icon: Megaphone,
     content: "Conteúdo de Geração de Demanda será inserido aqui.",
   },
   {
     id: "otimizacao",
     label: "Otimização da Máquina de Vendas",
+    icon: Settings,
     content: "Conteúdo de Otimização da Máquina de Vendas será inserido aqui.",
   },
   {
     id: "retencao",
     label: "Retenção e Expansão (LTV)",
+    icon: TrendingUp,
     content: "Conteúdo de Retenção e Expansão (LTV) será inserido aqui.",
   },
 ];
@@ -61,12 +66,13 @@ const MethodSection = () => {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`text-left px-6 py-4 rounded-2xl border transition-all duration-300 ${
+                className={`flex items-center gap-3 text-left px-6 py-4 rounded-2xl border transition-all duration-300 ${
                   activeTab === tab.id
                     ? "border-white/30 bg-[#0707ed]/15 backdrop-blur-[35px] text-foreground"
                     : "border-white/10 bg-transparent text-muted-foreground hover:border-white/20 hover:bg-white/5"
                 }`}
               >
+                <tab.icon className="w-5 h-5 shrink-0" />
                 <span className="font-medium">{tab.label}</span>
               </button>
             ))}
