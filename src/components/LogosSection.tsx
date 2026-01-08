@@ -9,7 +9,12 @@ const LogosSection = () => {
     "Logo 4",
     "Logo 5",
     "Logo 6",
+    "Logo 7",
+    "Logo 8",
   ];
+
+  // Duplicate logos for seamless infinite scroll
+  const duplicatedLogos = [...logos, ...logos];
 
   return (
     <section className="py-16 px-4 bg-black">
@@ -33,19 +38,22 @@ const LogosSection = () => {
             </p>
           </div>
 
-          <div className="relative z-10 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 items-center justify-items-center">
-            {logos.map((logo, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: index * 0.1 }}
-                viewport={{ once: true }}
-                className="flex items-center justify-center h-12 px-4 text-muted-foreground/50 font-medium"
-              >
-                {logo}
-              </motion.div>
-            ))}
+          {/* Infinite carousel */}
+          <div className="relative z-10 overflow-hidden">
+            {/* Fade edges */}
+            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black/80 to-transparent z-10 pointer-events-none" />
+            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black/80 to-transparent z-10 pointer-events-none" />
+            
+            <div className="flex animate-scroll">
+              {duplicatedLogos.map((logo, index) => (
+                <div
+                  key={index}
+                  className="flex-shrink-0 flex items-center justify-center h-12 px-8 text-muted-foreground/50 font-medium whitespace-nowrap"
+                >
+                  {logo}
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
       </div>
