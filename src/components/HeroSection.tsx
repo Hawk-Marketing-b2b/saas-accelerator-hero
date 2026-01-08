@@ -1,4 +1,4 @@
-import { ArrowRight, Play } from "lucide-react";
+import { ArrowRight, Play, Calendar, Rocket, DollarSign } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -15,9 +15,9 @@ const HeroSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   const stats = [
-    { value: "+20", label: "anos de mercado" },
-    { value: "+400", label: "softwares acelerados" },
-    { value: "+730M", label: "em receita gerada" },
+    { value: "+20", label: "anos de mercado", icon: Calendar },
+    { value: "+400", label: "softwares acelerados", icon: Rocket },
+    { value: "+730M", label: "em receita gerada", icon: DollarSign },
   ];
 
   return (
@@ -93,6 +93,7 @@ const HeroSection = () => {
                 key={stat.label}
                 value={stat.value}
                 label={stat.label}
+                icon={stat.icon}
                 delay={600 + index * 100}
               />
             ))}
