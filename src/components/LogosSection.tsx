@@ -18,7 +18,7 @@ const LogosSection = () => {
   const duplicatedLogos = [...logos, ...logos];
 
   return (
-    <section className="pt-4 pb-16 px-4 bg-black">
+    <section className="pt-4 pb-[30px] md:pb-16 px-4 bg-black">
       <div className="container mx-auto max-w-5xl">
         <motion.div
           initial={{ opacity: 0, y: 80 }}

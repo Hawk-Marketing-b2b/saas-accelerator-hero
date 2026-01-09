@@ -31,7 +31,7 @@ const TrainingSection = () => {
   const [isCsDialogOpen, setIsCsDialogOpen] = useState(false);
 
   return (
-    <section className="py-24 px-4 relative overflow-hidden">
+    <section className="py-[30px] md:py-24 px-4 relative overflow-hidden">
       {/* Gradient Background with Blur */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0707ed]/10 to-black" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[600px] bg-[#0707ed]/20 rounded-full blur-[150px]" />

@@ -36,7 +36,7 @@ const MethodSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <section className="py-24 px-4 bg-black">
+    <section className="py-[30px] md:py-24 px-4 bg-black">
       <div className="container mx-auto max-w-3xl">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
