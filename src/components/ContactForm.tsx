@@ -52,7 +52,7 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
     setIsLoading(true);
 
     try {
-      const payload = {
+      const payload = new URLSearchParams({
         nome: formData.nome,
         email: formData.email,
         whatsapp: formData.whatsapp,
@@ -67,15 +67,15 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
         referrer: utmData.referrer,
         page_url: window.location.href,
         timestamp: new Date().toISOString(),
-      };
+      });
 
       await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/x-www-form-urlencoded",
         },
         mode: "no-cors",
-        body: JSON.stringify(payload),
+        body: payload.toString(),
       });
 
       toast({
