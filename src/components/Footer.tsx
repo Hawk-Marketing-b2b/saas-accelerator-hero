@@ -79,15 +79,6 @@ const Footer = () => {
                   contato@acelerasaas.com
                 </a>
               </li>
-              <li>
-                <a
-                  href="tel:+5511999999999"
-                  className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
-                >
-                  <Phone className="w-4 h-4" />
-                  (11) 99999-9999
-                </a>
-              </li>
             </ul>
           </div>
         </div>
