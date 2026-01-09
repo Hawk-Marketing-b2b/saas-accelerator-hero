@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ContactFormProps {
   onSuccess?: () => void;
 }
+
+const WEBHOOK_URL = "https://n8n-n8n-start.t4r0vc.easypanel.host/webhook/site-acelera-saas";
 
 const ContactForm = ({ onSuccess }: ContactFormProps) => {
   const [formData, setFormData] = useState({
@@ -15,11 +18,43 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
     segmento: "",
     receita: "",
   });
+  const [isLoading, setIsLoading] = useState(false);
+  const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    onSuccess?.();
+    setIsLoading(true);
+
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        mode: "no-cors",
+        body: JSON.stringify({
+          ...formData,
+          timestamp: new Date().toISOString(),
+          source: window.location.origin,
+        }),
+      });
+
+      toast({
+        title: "Enviado com sucesso!",
+        description: "Em breve um especialista entrará em contato.",
+      });
+      
+      onSuccess?.();
+    } catch (error) {
+      console.error("Erro ao enviar formulário:", error);
+      toast({
+        title: "Erro ao enviar",
+        description: "Tente novamente em alguns instantes.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
@@ -107,8 +142,8 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
         <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-4 h-4 text-muted-foreground pointer-events-none" />
       </div>
 
-      <Button type="submit" variant="hero" size="lg" className="w-full mt-6">
-        Falar com Especialista
+      <Button type="submit" variant="hero" size="lg" className="w-full mt-6" disabled={isLoading}>
+        {isLoading ? "Enviando..." : "Falar com Especialista"}
       </Button>
     </form>
   );
