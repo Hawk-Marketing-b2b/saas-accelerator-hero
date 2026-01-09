@@ -25,7 +25,7 @@ const LogosSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true, margin: "-100px" }}
-          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-16 md:p-20 lg:p-24 overflow-hidden"
+          className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-8 md:p-16 lg:p-24 overflow-hidden"
         >
           {/* Rocket background image */}
           <div 
@@ -34,10 +34,10 @@ const LogosSection = () => {
           />
           
           <div className="relative z-10 text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
               +400 empresas SaaS
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-sm md:text-lg">
               que já aceleraram seu crescimento com nossa metodologia
             </p>
           </div>
