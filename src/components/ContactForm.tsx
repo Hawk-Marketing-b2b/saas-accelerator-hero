@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
@@ -9,6 +9,17 @@ interface ContactFormProps {
 
 const WEBHOOK_URL = "https://n8n-n8n-start.t4r0vc.easypanel.host/webhook/site-acelera-saas";
 
+const getUtmParams = () => {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    utm_source: params.get("utm_source") || "",
+    utm_campaign: params.get("utm_campaign") || "",
+    utm_content: params.get("utm_content") || "",
+    utm_term: params.get("utm_term") || "",
+    utm_medium: params.get("utm_medium") || "",
+  };
+};
+
 const ContactForm = ({ onSuccess }: ContactFormProps) => {
   const [formData, setFormData] = useState({
     nome: "",
@@ -18,25 +29,53 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
     segmento: "",
     receita: "",
   });
+  const [utmData, setUtmData] = useState({
+    utm_source: "",
+    utm_campaign: "",
+    utm_content: "",
+    utm_term: "",
+    utm_medium: "",
+    referrer: "",
+  });
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
+
+  useEffect(() => {
+    setUtmData({
+      ...getUtmParams(),
+      referrer: document.referrer || "",
+    });
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsLoading(true);
 
     try {
+      const payload = {
+        nome: formData.nome,
+        email: formData.email,
+        whatsapp: formData.whatsapp,
+        site: formData.site,
+        segmento: formData.segmento,
+        receita: formData.receita,
+        utm_source: utmData.utm_source,
+        utm_campaign: utmData.utm_campaign,
+        utm_content: utmData.utm_content,
+        utm_term: utmData.utm_term,
+        utm_medium: utmData.utm_medium,
+        referrer: utmData.referrer,
+        page_url: window.location.href,
+        timestamp: new Date().toISOString(),
+      };
+
       await fetch(WEBHOOK_URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         mode: "no-cors",
-        body: JSON.stringify({
-          ...formData,
-          timestamp: new Date().toISOString(),
-          source: window.location.origin,
-        }),
+        body: JSON.stringify(payload),
       });
 
       toast({
