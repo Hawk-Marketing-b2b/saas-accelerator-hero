@@ -1,5 +1,9 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Star, Quote } from "lucide-react";
+import { ShinyButton } from "@/components/ui/shiny-button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ContactForm from "@/components/ContactForm";
 
 const testimonials = [
   {
@@ -23,6 +27,8 @@ const testimonials = [
 ];
 
 const TestimonialsSection = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   return (
     <section className="py-24 px-4 relative overflow-hidden">
       {/* Gradient Background */}
@@ -101,7 +107,30 @@ const TestimonialsSection = () => {
             </div>
           ))}
         </motion.div>
+
+        {/* CTA Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
+          viewport={{ once: true }}
+          className="flex justify-center mt-12"
+        >
+          <ShinyButton onClick={() => setIsDialogOpen(true)}>
+            Falar com Especialista
+          </ShinyButton>
+        </motion.div>
       </div>
+
+      {/* Contact Form Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Fale com um Especialista</DialogTitle>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsDialogOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </section>
   );
 };

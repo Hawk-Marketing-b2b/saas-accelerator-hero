@@ -1,6 +1,11 @@
+import { useState } from "react";
 import { ShinyButton } from "@/components/ui/shiny-button";
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
+import ContactForm from "@/components/ContactForm";
 
 const Header = () => {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   const navItems = [
     { label: "Método", href: "#metodo" },
     { label: "Diferenciais", href: "#diferenciais" },
@@ -36,11 +41,21 @@ const Header = () => {
           </nav>
 
           {/* CTA */}
-          <ShinyButton className="hidden sm:flex">
+          <ShinyButton className="hidden sm:flex" onClick={() => setIsDialogOpen(true)}>
             Falar com Especialista
           </ShinyButton>
         </div>
       </div>
+
+      {/* Contact Form Dialog */}
+      <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
+        <DialogContent className="sm:max-w-md">
+          <DialogHeader>
+            <DialogTitle>Fale com um Especialista</DialogTitle>
+          </DialogHeader>
+          <ContactForm onSuccess={() => setIsDialogOpen(false)} />
+        </DialogContent>
+      </Dialog>
     </header>
   );
 };
