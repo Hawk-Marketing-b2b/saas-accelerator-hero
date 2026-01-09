@@ -71,7 +71,7 @@ const MethodSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: "easeOut", delay: index * 0.1 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 flex items-start gap-5"
+              className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-5 text-center md:text-left"
             >
               {/* Icon */}
               <div className="w-12 h-12 rounded-xl bg-[#0707ed]/15 border border-[#0707ed]/30 flex items-center justify-center shrink-0">
