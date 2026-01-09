@@ -6,6 +6,7 @@ import MethodSection from "@/components/MethodSection";
 import TrainingSection from "@/components/TrainingSection";
 import ComparisonSection from "@/components/ComparisonSection";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <TrainingSection />
       <ComparisonSection />
       <TestimonialsSection />
+      <Footer />
     </div>
   );
 };
