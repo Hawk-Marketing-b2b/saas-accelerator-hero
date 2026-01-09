@@ -29,7 +29,7 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-black via-[#0a0a1a] to-black">
+    <section className="py-[30px] md:py-20 px-4 bg-gradient-to-b from-black via-[#0a0a1a] to-black">
       <div className="container mx-auto max-w-6xl">
         {/* Badge */}
         <div className="flex justify-center mb-6">
