@@ -96,10 +96,12 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
       />
 
       <input
-        type="url"
+        type="text"
         name="site"
-        placeholder="Site da empresa*"
+        placeholder="Site da empresa* (ex: empresa.com.br)"
         required
+        pattern="^[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?)+$"
+        title="Insira um domínio válido (ex: empresa.com.br, app.io, site.app)"
         value={formData.site}
         onChange={handleChange}
         className={inputClasses}
