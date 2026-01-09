@@ -1,4 +1,5 @@
 import { Linkedin, Instagram, Youtube, Mail, Phone } from "lucide-react";
+import logoAceleraSaas from "@/assets/logo-acelera-saas.png";
 
 const Footer = () => {
   const quickLinks = [
@@ -22,13 +23,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-white rounded flex items-center justify-center">
-                <span className="text-black font-bold text-lg">A</span>
-              </div>
-              <span className="text-white font-semibold">
-                Acelera<br />
-                <span className="text-white/70 text-sm">SaaS</span>
-              </span>
+              <img src={logoAceleraSaas} alt="Acelera SaaS" className="h-12 w-auto" />
             </div>
             <p className="text-white/60 text-sm leading-relaxed mb-6 max-w-md">
               Aceleramos o crescimento de empresas SaaS B2B com uma metodologia validada em mais de 400 projetos. Sua parceira estratégica para dominar o mercado.
