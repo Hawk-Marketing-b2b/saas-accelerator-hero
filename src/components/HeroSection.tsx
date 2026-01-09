@@ -29,7 +29,7 @@ const HeroSection = () => {
       {/* Bottom gradient fade to black */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 
-      <div className="w-full px-4 relative z-10 py-32">
+      <div className="w-full px-4 relative z-10 pt-24 pb-8 md:py-32">
         <div className="max-w-4xl mx-auto text-center space-y-8 flex flex-col items-center">
           {/* Badge */}
           <div 
