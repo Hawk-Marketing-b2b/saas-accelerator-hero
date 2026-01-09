@@ -1,17 +1,30 @@
 import { motion } from "framer-motion";
 import rocketBg from "@/assets/rocket-bg.jpg";
 
+// Import client logos
+import logoHakai from "@/assets/clients/logo-hakai.png";
+import logoFretatech from "@/assets/clients/fretatech.webp";
+import logoIslonline from "@/assets/clients/islonline.png";
+import logoDoc24 from "@/assets/clients/doc24.png";
+import logoBionexo from "@/assets/clients/bionexo.png";
+import logoCostdrivers from "@/assets/clients/costdrivers.png";
+import logoAgrow from "@/assets/clients/agrow.png";
+import logoNola from "@/assets/clients/nola.png";
+import logoCvortex from "@/assets/clients/cvortex.webp";
+import logoMktzap from "@/assets/clients/mktzap.png";
+
 const LogosSection = () => {
-  // Placeholder logos - these would be replaced with actual client logos
   const logos = [
-    "Logo 1",
-    "Logo 2", 
-    "Logo 3",
-    "Logo 4",
-    "Logo 5",
-    "Logo 6",
-    "Logo 7",
-    "Logo 8",
+    { src: logoHakai, alt: "Hakai" },
+    { src: logoFretatech, alt: "Fretatech" },
+    { src: logoIslonline, alt: "ISL Online" },
+    { src: logoDoc24, alt: "Doc24" },
+    { src: logoBionexo, alt: "Bionexo" },
+    { src: logoCostdrivers, alt: "Costdrivers" },
+    { src: logoAgrow, alt: "aGrow" },
+    { src: logoNola, alt: "Nola" },
+    { src: logoCvortex, alt: "cVortex" },
+    { src: logoMktzap, alt: "MktZap" },
   ];
 
   // Duplicate logos for seamless infinite scroll
@@ -52,9 +65,13 @@ const LogosSection = () => {
               {duplicatedLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center h-12 px-8 text-muted-foreground/50 font-medium whitespace-nowrap"
+                  className="flex-shrink-0 flex items-center justify-center h-12 px-8"
                 >
-                  {logo}
+                  <img 
+                    src={logo.src} 
+                    alt={logo.alt}
+                    className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                  />
                 </div>
               ))}
             </div>
