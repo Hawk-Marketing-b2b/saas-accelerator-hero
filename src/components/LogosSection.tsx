@@ -65,12 +65,12 @@ const LogosSection = () => {
               {duplicatedLogos.map((logo, index) => (
                 <div
                   key={index}
-                  className="flex-shrink-0 flex items-center justify-center h-12 px-8"
+                  className="flex-shrink-0 flex items-center justify-center h-12 px-10"
                 >
                   <img 
                     src={logo.src} 
                     alt={logo.alt}
-                    className="h-8 md:h-10 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                    className="h-6 md:h-7 max-w-[100px] md:max-w-[120px] w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
                   />
                 </div>
               ))}
