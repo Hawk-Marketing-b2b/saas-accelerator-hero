@@ -52,7 +52,7 @@ const ComparisonSection = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-900/10 to-black" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/15 rounded-full blur-[150px]" />
 
-      <div className="container mx-auto max-w-5xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -112,13 +112,13 @@ const ComparisonSection = () => {
               <div className="p-4 md:p-6 flex items-center">
                 <span className="text-sm font-medium text-foreground">{row.aspect}</span>
               </div>
-              <div className="p-4 md:p-6 border-l border-white/10 flex items-center gap-2">
+              <div className="p-4 md:p-6 border-l border-white/10 flex flex-col items-center md:flex-row md:items-center gap-1 md:gap-2">
                 <X className="w-4 h-4 text-red-400 flex-shrink-0" />
-                <span className="text-sm text-muted-foreground">{row.generic}</span>
+                <span className="text-xs md:text-sm text-muted-foreground text-center md:text-left">{row.generic}</span>
               </div>
-              <div className="p-4 md:p-6 border-l border-white/10 flex items-center gap-2 bg-blue-500/[0.03]">
+              <div className="p-4 md:p-6 border-l border-white/10 flex flex-col items-center md:flex-row md:items-center gap-1 md:gap-2 bg-blue-500/[0.03]">
                 <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
-                <span className="text-sm text-foreground">{row.acelera}</span>
+                <span className="text-xs md:text-sm text-foreground text-center md:text-left">{row.acelera}</span>
               </div>
             </div>
           ))}
