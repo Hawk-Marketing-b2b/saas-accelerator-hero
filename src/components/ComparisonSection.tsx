@@ -94,7 +94,7 @@ const ComparisonSection = () => {
             <div className="p-4 md:p-6 border-l border-white/10">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-blue-400">Acelera SaaS</span>
-                <span className="text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                <span className="hidden md:inline text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
                   Recomendado
                 </span>
               </div>
