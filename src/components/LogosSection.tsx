@@ -15,16 +15,16 @@ import logoMktzap from "@/assets/clients/mktzap.png";
 
 const LogosSection = () => {
   const logos = [
-    { src: logoHakai, alt: "Hakai" },
-    { src: logoFretatech, alt: "Fretatech" },
-    { src: logoIslonline, alt: "ISL Online" },
-    { src: logoDoc24, alt: "Doc24" },
-    { src: logoBionexo, alt: "Bionexo" },
-    { src: logoCostdrivers, alt: "Costdrivers" },
-    { src: logoAgrow, alt: "aGrow" },
-    { src: logoNola, alt: "Nola" },
-    { src: logoCvortex, alt: "cVortex" },
-    { src: logoMktzap, alt: "MktZap" },
+    { src: logoHakai, alt: "Hakai", size: "large" },
+    { src: logoFretatech, alt: "Fretatech", size: "large" },
+    { src: logoIslonline, alt: "ISL Online", size: "normal" },
+    { src: logoDoc24, alt: "Doc24", size: "normal" },
+    { src: logoBionexo, alt: "Bionexo", size: "normal" },
+    { src: logoCostdrivers, alt: "Costdrivers", size: "large" },
+    { src: logoAgrow, alt: "aGrow", size: "large" },
+    { src: logoNola, alt: "Nola", size: "normal" },
+    { src: logoCvortex, alt: "cVortex", size: "normal" },
+    { src: logoMktzap, alt: "MktZap", size: "large" },
   ];
 
   // Duplicate logos for seamless infinite scroll
@@ -70,7 +70,11 @@ const LogosSection = () => {
                   <img 
                     src={logo.src} 
                     alt={logo.alt}
-                    className="h-6 md:h-7 max-w-[100px] md:max-w-[120px] w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity"
+                    className={`w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity ${
+                      logo.size === "large" 
+                        ? "h-8 md:h-10 max-w-[140px] md:max-w-[160px]" 
+                        : "h-6 md:h-7 max-w-[100px] md:max-w-[120px]"
+                    }`}
                   />
                 </div>
               ))}
