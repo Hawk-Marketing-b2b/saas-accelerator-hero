@@ -47,12 +47,12 @@ const ComparisonSection = () => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   return (
-    <section className="py-[30px] md:py-24 px-2 md:px-4 relative overflow-hidden">
+    <section className="py-[30px] md:py-24 px-0 md:px-4 relative overflow-hidden">
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-900/10 to-black" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/15 rounded-full blur-[150px]" />
 
-      <div className="container mx-auto max-w-6xl relative z-10">
+      <div className="container mx-auto max-w-6xl relative z-10 px-0 md:px-4">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 40 }}
