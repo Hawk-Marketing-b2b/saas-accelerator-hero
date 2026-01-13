@@ -33,15 +33,15 @@ const StatsSection = () => {
       <div className="container mx-auto max-w-6xl">
         {/* Badge */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#0707ed]/30 bg-[#0707ed]/10">
-            <TrendingUp className="w-4 h-4 text-[#0707ed]" />
-            <span className="text-[#0707ed] text-sm font-medium">Resultados Comprovados</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10">
+            <TrendingUp className="w-4 h-4 text-primary" />
+            <span className="text-primary text-sm font-medium">Resultados Comprovados</span>
           </div>
         </div>
 
         {/* Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16">
-          Alguns <span className="text-[#0707ed]">números</span> de nossa aceleradora
+          Alguns <span className="text-primary">números</span> de nossa aceleradora
         </h2>
 
         {/* Stats Grid */}
@@ -52,16 +52,16 @@ const StatsSection = () => {
               className="relative p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm flex flex-col items-center text-center"
             >
               {/* Icon */}
-              <div className="w-14 h-14 rounded-xl bg-[#0707ed]/20 border border-[#0707ed]/30 flex items-center justify-center mb-6">
-                <stat.icon className="w-6 h-6 text-[#0707ed]" />
+              <div className="w-14 h-14 rounded-xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6">
+                <stat.icon className="w-6 h-6 text-primary" />
               </div>
 
               {/* Value */}
               <div className="flex items-baseline justify-center mb-2">
-                <span className="text-4xl md:text-5xl font-bold text-[#0707ed]">
+                <span className="text-4xl md:text-5xl font-bold text-primary">
                   {stat.value}
                 </span>
-                <span className="text-xl md:text-2xl font-bold text-[#0707ed]">
+                <span className="text-xl md:text-2xl font-bold text-primary">
                   {stat.suffix}
                 </span>
               </div>
