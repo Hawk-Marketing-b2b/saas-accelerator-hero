@@ -70,12 +70,12 @@ export default {
           light: "hsl(var(--gray-light))",
           medium: "hsl(var(--gray-medium))",
         },
-        "blue-custom": {
-          soft: "hsl(var(--blue-soft))",
-          pale: "hsl(var(--blue-pale))",
+        purple: {
+          primary: "hsl(var(--purple-primary))",
+          light: "hsl(var(--purple-light))",
         },
-        cyan: {
-          light: "hsl(var(--cyan-light))",
+        magenta: {
+          primary: "hsl(var(--magenta-primary))",
         },
       },
       borderRadius: {
