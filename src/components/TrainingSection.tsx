@@ -53,7 +53,7 @@ const TrainingSection = () => {
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             Treinamento{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">
+            <span className="heading-gradient">
               Comercial & CS
             </span>
           </h2>

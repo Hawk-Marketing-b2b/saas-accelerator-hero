@@ -52,7 +52,7 @@ const TestimonialsSection = () => {
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             O que nossos{" "}
-            <span className="text-primary">clientes</span>{" "}
+            <span className="heading-gradient">clientes</span>{" "}
             dizem
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
