@@ -50,10 +50,8 @@ const TestimonialsSection = () => {
             <span className="text-sm text-primary">Depoimentos</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            O que nossos{" "}
-            <span className="heading-gradient">clientes</span>{" "}
-            dizem
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold heading-gradient mb-6">
+            O que nossos clientes dizem
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Histórias reais de empresas que aceleraram seu crescimento com nossa metodologia
