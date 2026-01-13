@@ -51,11 +51,8 @@ const TrainingSection = () => {
             <span className="text-sm text-primary">Capacitação de Equipes</span>
           </div>
 
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            Treinamento{" "}
-            <span className="heading-gradient">
-              Comercial & CS
-            </span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold heading-gradient mb-6">
+            Treinamento Comercial & CS
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Transforme seu time em uma máquina de vendas e retenção com nossa metodologia validada

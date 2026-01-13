@@ -46,10 +46,10 @@ const HeroSection = () => {
             className="space-y-4 opacity-0 animate-fade-up"
             style={{ animationDelay: '200ms', animationFillMode: 'forwards' }}
           >
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight text-foreground">
-              Acelere as Vendas do seu <span className="heading-gradient">SaaS</span>
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold leading-tight heading-gradient">
+              Acelere as Vendas do seu SaaS
             </h1>
-            <p className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-foreground/90">
+            <p className="font-display text-3xl md:text-4xl lg:text-5xl font-bold heading-gradient">
               e Domine o Mercado
             </p>
           </div>
