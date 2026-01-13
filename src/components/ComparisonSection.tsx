@@ -49,8 +49,8 @@ const ComparisonSection = () => {
   return (
     <section className="py-[30px] md:py-24 px-0 md:px-4 relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-blue-900/10 to-black" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/15 rounded-full blur-[150px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/15 rounded-full blur-[150px]" />
 
       <div className="container mx-auto max-w-6xl relative z-10 px-0 md:px-4">
         {/* Header */}
@@ -62,9 +62,9 @@ const ComparisonSection = () => {
           className="text-center mb-16"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 mb-6">
-            <Award className="w-4 h-4 text-blue-400" />
-            <span className="text-sm text-blue-400">Nossos Diferenciais</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
+            <Award className="w-4 h-4 text-primary" />
+            <span className="text-sm text-primary">Nossos Diferenciais</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
@@ -93,8 +93,8 @@ const ComparisonSection = () => {
             </div>
             <div className="p-4 md:p-6 border-l border-white/10">
               <div className="flex items-center gap-2">
-                <span className="text-sm font-medium text-blue-400">Acelera SaaS</span>
-                <span className="hidden md:inline text-xs px-2 py-0.5 rounded-full bg-blue-500/20 text-blue-300 border border-blue-500/30">
+                <span className="text-sm font-medium text-primary">Acelera SaaS</span>
+                <span className="hidden md:inline text-xs px-2 py-0.5 rounded-full bg-primary/20 text-primary border border-primary/30">
                   Recomendado
                 </span>
               </div>
@@ -116,8 +116,8 @@ const ComparisonSection = () => {
                 <X className="w-4 h-4 text-red-400 flex-shrink-0" />
                 <span className="text-xs md:text-sm text-muted-foreground text-center md:text-left">{row.generic}</span>
               </div>
-              <div className="p-4 md:p-6 border-l border-white/10 flex flex-col items-center md:flex-row md:items-center gap-1 md:gap-2 bg-blue-500/[0.03]">
-                <Check className="w-4 h-4 text-blue-400 flex-shrink-0" />
+              <div className="p-4 md:p-6 border-l border-white/10 flex flex-col items-center md:flex-row md:items-center gap-1 md:gap-2 bg-primary/[0.03]">
+                <Check className="w-4 h-4 text-primary flex-shrink-0" />
                 <span className="text-xs md:text-sm text-foreground text-center md:text-left">{row.acelera}</span>
               </div>
             </div>

@@ -46,11 +46,11 @@ const MethodSection = () => {
           className="text-center mb-16"
         >
           {/* Result Badge - Above title */}
-          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-[#0707ed]/30 bg-[#0707ed]/10 mb-6">
-            <Sparkles className="w-4 h-4 text-[#0707ed]" />
+          <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary/30 bg-primary/10 mb-6">
+            <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm">
               <span className="text-muted-foreground">Resultado:</span>{" "}
-              <span className="text-[#0707ed] font-medium">Crescimento Exponencial</span>
+              <span className="text-primary font-medium">Crescimento Exponencial</span>
             </span>
           </div>
 
@@ -74,8 +74,8 @@ const MethodSection = () => {
               className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-6 flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-5 text-center md:text-left"
             >
               {/* Icon */}
-              <div className="w-12 h-12 rounded-xl bg-[#0707ed]/15 border border-[#0707ed]/30 flex items-center justify-center shrink-0">
-                <step.icon className="w-5 h-5 text-[#0707ed]" />
+              <div className="w-12 h-12 rounded-xl bg-primary/15 border border-primary/30 flex items-center justify-center shrink-0">
+                <step.icon className="w-5 h-5 text-primary" />
               </div>
 
               {/* Number */}

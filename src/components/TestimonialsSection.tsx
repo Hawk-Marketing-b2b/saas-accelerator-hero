@@ -32,8 +32,8 @@ const TestimonialsSection = () => {
   return (
     <section className="py-[30px] md:py-24 px-4 relative overflow-hidden">
       {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-[#0707ed]/10 to-black" />
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-[#0707ed]/15 rounded-full blur-[150px]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/15 rounded-full blur-[150px]" />
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Header */}
@@ -45,14 +45,14 @@ const TestimonialsSection = () => {
           className="text-center mb-16"
         >
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#0707ed]/30 bg-[#0707ed]/10 mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
             <Star className="w-4 h-4 text-yellow-400 fill-yellow-400" />
-            <span className="text-sm text-[#0707ed]">Depoimentos</span>
+            <span className="text-sm text-primary">Depoimentos</span>
           </div>
 
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             O que nossos{" "}
-            <span className="text-[#0707ed]">clientes</span>{" "}
+            <span className="text-primary">clientes</span>{" "}
             dizem
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
@@ -74,7 +74,7 @@ const TestimonialsSection = () => {
               className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-8 flex flex-col"
             >
               {/* Quote Icon */}
-              <Quote className="w-10 h-10 text-[#0707ed]/40 mb-4" />
+              <Quote className="w-10 h-10 text-primary/40 mb-4" />
 
               {/* Stars */}
               <div className="flex gap-1 mb-4">
@@ -90,8 +90,8 @@ const TestimonialsSection = () => {
 
               {/* Author */}
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-[#0707ed]/20 border border-[#0707ed]/30 flex items-center justify-center">
-                  <span className="text-xs font-semibold text-[#0707ed]">
+                <div className="w-10 h-10 rounded-full bg-primary/20 border border-primary/30 flex items-center justify-center">
+                  <span className="text-xs font-semibold text-primary">
                     {testimonial.initials}
                   </span>
                 </div>
