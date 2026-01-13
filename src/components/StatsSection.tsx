@@ -41,7 +41,7 @@ const StatsSection = () => {
 
         {/* Title */}
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-white mb-16">
-          Alguns <span className="text-primary">números</span> de nossa aceleradora
+          Alguns <span className="heading-gradient">números</span> de nossa aceleradora
         </h2>
 
         {/* Stats Grid */}
