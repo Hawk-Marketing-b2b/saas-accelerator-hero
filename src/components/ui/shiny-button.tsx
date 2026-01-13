@@ -11,7 +11,7 @@ export function ShinyButton({ children, onClick, className = "" }: ShinyButtonPr
   return (
     <button 
       className={cn(
-        "px-6 py-3 rounded-full font-medium text-sm text-white bg-[#7028ff] shadow-[0_4px_20px_rgba(112,40,255,0.4)] hover:shadow-[0_6px_30px_rgba(112,40,255,0.6)] hover:brightness-110 transition-all duration-300 active:translate-y-0.5",
+        "px-6 py-3 rounded-full font-medium text-sm text-white bg-[#a855f7] shadow-[0_4px_20px_rgba(168,85,247,0.4)] hover:shadow-[0_6px_30px_rgba(168,85,247,0.6)] hover:brightness-110 transition-all duration-300 active:translate-y-0.5",
         className
       )} 
       onClick={onClick}
