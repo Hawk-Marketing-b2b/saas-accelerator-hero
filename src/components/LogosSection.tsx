@@ -40,11 +40,17 @@ const LogosSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="relative rounded-3xl border border-white/10 backdrop-blur-[35px] p-8 md:p-16 lg:p-24 overflow-hidden"
         >
+          {/* Pink glow overlay */}
+          <div className="absolute inset-0 bg-gradient-radial from-pink-500/30 via-pink-500/10 to-transparent" />
+          
           {/* Rocket background image */}
           <div 
             className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
             style={{ backgroundImage: `url(${rocketBg})` }}
           />
+          
+          {/* Additional pink ambient glow around edges */}
+          <div className="absolute inset-0 shadow-[inset_0_0_150px_60px_rgba(212,40,166,0.15)]" />
           
           <div className="relative z-10 text-center mb-10">
             <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-foreground mb-3">
