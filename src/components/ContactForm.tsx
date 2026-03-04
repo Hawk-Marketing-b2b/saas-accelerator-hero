@@ -137,15 +137,23 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
         className={inputClasses}
       />
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Email corporativo*"
-        required
-        value={formData.email}
-        onChange={handleChange}
-        className={inputClasses}
-      />
+      <div>
+        <input
+          type="email"
+          name="email"
+          placeholder="Email corporativo*"
+          required
+          value={formData.email}
+          onChange={(e) => {
+            handleChange(e);
+            if (emailError) setEmailError("");
+          }}
+          className={`${inputClasses} ${emailError ? "ring-2 ring-red-500 border-red-500" : ""}`}
+        />
+        {emailError && (
+          <p className="text-red-400 text-sm mt-1">{emailError}</p>
+        )}
+      </div>
 
       <input
         type="tel"
