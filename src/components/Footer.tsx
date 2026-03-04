@@ -12,7 +12,7 @@ const Footer = () => {
 
   const socialLinks = [
     { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Instagram, href: "https://instagram.com", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/acelerasaas/", label: "Instagram" },
     { icon: Youtube, href: "https://youtube.com", label: "YouTube" }
   ];
 
