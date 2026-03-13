@@ -17,11 +17,11 @@ const AllClientsSection = () => {
           </h2>
 
           {/* Clients Grid Image */}
-          <div className="relative overflow-hidden rounded-xl bg-white">
+          <div className="relative overflow-hidden rounded-xl">
             <img 
               src={allClientsGrid} 
               alt="Clientes SaaS atendidos: cVortex, Arco, SmartGo, Hakai, Bionexo, Nola, Recepção Inteligente, Jimmy Chat, Fretatech, Atomic Agro, aGrow, Fieldy, GEP Costdrivers, Ellevo, AtendeBot, Onlineclinic, MktZap, ISL Online, Doc24"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain invert opacity-80"
             />
           </div>
         </motion.div>
