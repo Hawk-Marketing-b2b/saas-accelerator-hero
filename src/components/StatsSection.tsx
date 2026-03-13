@@ -1,4 +1,5 @@
 import { Users, DollarSign, TrendingUp } from "lucide-react";
+import helmetImg from "@/assets/helmet-acelera.png";
 
 const stats = [
   {
@@ -23,8 +24,13 @@ const stats = [
 
 const StatsSection = () => {
   return (
-    <section className="py-[30px] md:py-20 px-4 bg-gradient-to-b from-black via-[#0a0a1a] to-black">
-      <div className="container mx-auto max-w-6xl">
+    <section className="py-[30px] md:py-20 px-4 bg-gradient-to-b from-black via-[#0a0a1a] to-black relative overflow-hidden">
+      {/* Helmet Background - decorative */}
+      <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[400px] h-[400px] opacity-[0.08] pointer-events-none hidden lg:block">
+        <img src={helmetImg} alt="" className="w-full h-full object-contain" />
+      </div>
+
+      <div className="container mx-auto max-w-6xl relative z-10">
         {/* Badge */}
         <div className="flex justify-center mb-6 pt-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10">

@@ -4,43 +4,16 @@ import { Award, X, Check } from "lucide-react";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "@/components/ContactForm";
+import f1Car from "@/assets/f1-car-acelera.png";
 
 const comparisonData = [
-  {
-    aspect: "Foco de Mercado",
-    generic: "Todos os segmentos",
-    acelera: "100% SaaS B2B",
-  },
-  {
-    aspect: "Experiência",
-    generic: "Variável",
-    acelera: "10+ anos em SaaS",
-  },
-  {
-    aspect: "Metodologia",
-    generic: "Genérica",
-    acelera: "Própria e validada em 400+ softwares",
-  },
-  {
-    aspect: "Capacitação Comercial",
-    generic: "Generalista",
-    acelera: "Especializada em venda de software",
-  },
-  {
-    aspect: "Tecnologia",
-    generic: "Ferramentas terceirizadas",
-    acelera: "Tecnologia própria com I.A.",
-  },
-  {
-    aspect: "Escopo de Serviços",
-    generic: "Marketing apenas",
-    acelera: "Marketing + Vendas + CS + Treinamento",
-  },
-  {
-    aspect: "Histórico",
-    generic: "Portfólio genérico",
-    acelera: "400+ SaaS acelerados",
-  },
+  { aspect: "Foco de Mercado", generic: "Todos os segmentos", acelera: "100% SaaS B2B" },
+  { aspect: "Experiência", generic: "Variável", acelera: "10+ anos em SaaS" },
+  { aspect: "Metodologia", generic: "Genérica", acelera: "Própria e validada em 400+ softwares" },
+  { aspect: "Capacitação Comercial", generic: "Generalista", acelera: "Especializada em venda de software" },
+  { aspect: "Tecnologia", generic: "Ferramentas terceirizadas", acelera: "Tecnologia própria com I.A." },
+  { aspect: "Escopo de Serviços", generic: "Marketing apenas", acelera: "Marketing + Vendas + CS + Treinamento" },
+  { aspect: "Histórico", generic: "Portfólio genérico", acelera: "400+ SaaS acelerados" },
 ];
 
 const ComparisonSection = () => {
@@ -51,6 +24,11 @@ const ComparisonSection = () => {
       {/* Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-b from-black via-primary/10 to-black" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-primary/15 rounded-full blur-[150px]" />
+      
+      {/* F1 Car decorative */}
+      <div className="absolute -right-32 bottom-0 w-[500px] h-[500px] opacity-[0.06] pointer-events-none hidden lg:block">
+        <img src={f1Car} alt="" className="w-full h-full object-contain" />
+      </div>
 
       <div className="container mx-auto max-w-6xl relative z-10 px-0 md:px-4">
         {/* Header */}
@@ -61,7 +39,6 @@ const ComparisonSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
             <Award className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary">Nossos Diferenciais</span>
@@ -101,7 +78,6 @@ const ComparisonSection = () => {
             </div>
           </div>
 
-          {/* Table Rows */}
           {comparisonData.map((row, index) => (
             <div
               key={row.aspect}
@@ -124,7 +100,7 @@ const ComparisonSection = () => {
           ))}
         </motion.div>
 
-        {/* CTA Button */}
+        {/* CTA */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -138,7 +114,6 @@ const ComparisonSection = () => {
         </motion.div>
       </div>
 
-      {/* Contact Form Dialog */}
       <Dialog open={isDialogOpen} onOpenChange={setIsDialogOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
