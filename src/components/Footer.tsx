@@ -1,5 +1,6 @@
-import { Linkedin, Instagram, Youtube, Mail, Phone } from "lucide-react";
+import { Linkedin, Instagram, Youtube, Mail, MapPin } from "lucide-react";
 import logoAceleraSaas from "@/assets/logo-acelera-saas.png";
+import sedeImg from "@/assets/sede-uberlandia.jpg";
 
 const Footer = () => {
   const quickLinks = [
@@ -61,20 +62,31 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Contact */}
+          {/* Contact & Address */}
           <div>
             <h3 className="text-white font-semibold mb-4">Contato</h3>
-            <ul className="space-y-3">
+            <ul className="space-y-3 mb-5">
               <li>
                 <a
                   href="mailto:contato@acelerasaas.com"
                   className="flex items-center gap-2 text-white/60 hover:text-white transition-colors text-sm"
                 >
-                  <Mail className="w-4 h-4" />
+                  <Mail className="w-4 h-4 shrink-0" />
                   contato@acelerasaas.com
                 </a>
               </li>
+              <li className="flex items-start gap-2 text-white/60 text-sm">
+                <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
+                <span>Complexo Vinhedos, Uberlândia - MG</span>
+              </li>
             </ul>
+            <div className="rounded-xl overflow-hidden border border-white/10">
+              <img 
+                src={sedeImg} 
+                alt="Sede Acelera SaaS - Complexo Vinhedos, Uberlândia-MG" 
+                className="w-full h-32 object-cover"
+              />
+            </div>
           </div>
         </div>
       </div>
