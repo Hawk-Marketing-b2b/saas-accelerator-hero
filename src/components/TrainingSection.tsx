@@ -4,6 +4,7 @@ import { Target, Heart, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
 import ShinyButton from "./ui/shiny-button";
+import f1Car from "@/assets/f1-car-acelera.png";
 
 const commercialFeatures = [
   "Script de vendas estratégico",
@@ -18,7 +19,6 @@ const csFeatures = [
   "Estratégias de upsell/cross-sell",
   "Redução de churn",
 ];
-
 
 const TrainingSection = () => {
   const [isCommercialDialogOpen, setIsCommercialDialogOpen] = useState(false);
@@ -39,7 +39,6 @@ const TrainingSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10 mb-6">
             <Target className="w-4 h-4 text-primary" />
             <span className="text-sm text-primary">Capacitação de Equipes</span>
@@ -51,6 +50,21 @@ const TrainingSection = () => {
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Transforme seu time em uma máquina de vendas e retenção com nossa metodologia validada
           </p>
+        </motion.div>
+
+        {/* F1 Car Visual */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, margin: "-100px" }}
+          className="flex justify-center mb-12"
+        >
+          <img 
+            src={f1Car} 
+            alt="Acelera SaaS - Alta performance" 
+            className="w-full max-w-md h-auto object-contain drop-shadow-[0_0_30px_rgba(212,40,166,0.2)]"
+          />
         </motion.div>
 
         {/* Training Cards */}
@@ -131,7 +145,6 @@ const TrainingSection = () => {
             </ShinyButton>
           </div>
         </motion.div>
-
       </div>
 
       {/* Commercial Dialog */}

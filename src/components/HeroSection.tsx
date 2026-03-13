@@ -1,6 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
 import {
   Dialog,
   DialogContent,
@@ -10,6 +9,7 @@ import {
 import { ShinyButton } from "@/components/ui/shiny-button";
 import ContactForm from "./ContactForm";
 import AuroraBackground from "./AuroraBackground";
+import f1Car from "@/assets/f1-car-acelera.png";
 
 const HeroSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
@@ -23,7 +23,7 @@ const HeroSection = () => {
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
 
       <div className="w-full px-4 relative z-10 pt-24 pb-8 md:py-32">
-        <div className="max-w-4xl mx-auto text-center space-y-8 flex flex-col items-center">
+        <div className="max-w-5xl mx-auto text-center space-y-8 flex flex-col items-center">
           {/* Badge */}
           <div 
             className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full border border-border/50 bg-muted/30 backdrop-blur-sm opacity-0 animate-fade-up"
@@ -71,6 +71,17 @@ const HeroSection = () => {
             </ShinyButton>
           </div>
 
+          {/* F1 Car Image */}
+          <div 
+            className="w-full max-w-3xl mx-auto opacity-0 animate-fade-up pt-4"
+            style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
+          >
+            <img 
+              src={f1Car} 
+              alt="Acelera SaaS - Velocidade e performance" 
+              className="w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(168,85,247,0.3)]"
+            />
+          </div>
         </div>
       </div>
 

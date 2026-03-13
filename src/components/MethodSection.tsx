@@ -4,6 +4,7 @@ import { Search, Megaphone, Settings, Heart, Sparkles, ArrowRight } from "lucide
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import { ShinyButton } from "@/components/ui/shiny-button";
 import ContactForm from "@/components/ContactForm";
+import helmetImg from "@/assets/helmet-acelera.png";
 
 const steps = [
   {
@@ -36,8 +37,13 @@ const MethodSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
   return (
-    <section className="py-[30px] md:py-24 px-4 bg-black">
-      <div className="container mx-auto max-w-3xl">
+    <section className="py-[30px] md:py-24 px-4 bg-black relative overflow-hidden">
+      {/* Helmet decorative element */}
+      <div className="absolute -left-16 top-1/3 w-[350px] h-[350px] opacity-[0.06] pointer-events-none hidden lg:block rotate-[-15deg]">
+        <img src={helmetImg} alt="" className="w-full h-full object-contain" />
+      </div>
+
+      <div className="container mx-auto max-w-3xl relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +51,7 @@ const MethodSection = () => {
           viewport={{ once: true, margin: "-100px" }}
           className="text-center mb-16"
         >
-          {/* Result Badge - Above title */}
+          {/* Result Badge */}
           <div className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-primary/30 bg-primary/10 mb-6">
             <Sparkles className="w-4 h-4 text-primary" />
             <span className="text-sm">
