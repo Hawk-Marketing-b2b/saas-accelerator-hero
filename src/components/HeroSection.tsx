@@ -8,7 +8,6 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import StatCard from "./StatCard";
 import ContactForm from "./ContactForm";
 import AuroraBackground from "./AuroraBackground";
 
