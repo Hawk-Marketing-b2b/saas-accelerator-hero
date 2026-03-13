@@ -18,6 +18,11 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Aurora Background */}
       <AuroraBackground />
+
+      {/* F1 Car - background decorative */}
+      <div className="absolute -right-20 bottom-0 w-[600px] h-[300px] opacity-[0.07] pointer-events-none hidden lg:block">
+        <img src={f1Car} alt="" className="w-full h-full object-contain" />
+      </div>
       
       {/* Bottom gradient fade to black */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
@@ -71,17 +76,6 @@ const HeroSection = () => {
             </ShinyButton>
           </div>
 
-          {/* F1 Car Image */}
-          <div 
-            className="w-full max-w-3xl mx-auto opacity-0 animate-fade-up pt-4"
-            style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
-          >
-            <img 
-              src={f1Car} 
-              alt="Acelera SaaS - Velocidade e performance" 
-              className="w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(168,85,247,0.3)]"
-            />
-          </div>
         </div>
       </div>
 
