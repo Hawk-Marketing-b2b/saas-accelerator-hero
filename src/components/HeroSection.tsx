@@ -14,12 +14,6 @@ import AuroraBackground from "./AuroraBackground";
 const HeroSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const stats = [
-    { value: "+20", label: "anos de mercado", icon: Calendar },
-    { value: "+400", label: "softwares acelerados", icon: Rocket },
-    { value: "+730M", label: "em receita gerada", icon: DollarSign },
-  ];
-
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Aurora Background */}
