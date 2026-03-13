@@ -53,9 +53,22 @@ const TestimonialsSection = () => {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold heading-gradient mb-6">
             O que nossos clientes dizem
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10">
             Histórias reais de empresas que aceleraram seu crescimento com nossa metodologia
           </p>
+
+          {/* YouTube Video */}
+          <div className="max-w-3xl mx-auto rounded-2xl overflow-hidden border border-white/10">
+            <div className="relative w-full" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/RsV-W0AabNk"
+                title="Depoimento de Cliente"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
+            </div>
+          </div>
         </motion.div>
 
         {/* Testimonials Grid */}
