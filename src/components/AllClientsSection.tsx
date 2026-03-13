@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import allClientsGrid from "@/assets/clients/all-clients-grid.png";
+import allClientsGrid from "@/assets/clients/all-clients-grid-new.png";
 
 const AllClientsSection = () => {
   return (
