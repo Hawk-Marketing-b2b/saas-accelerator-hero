@@ -52,20 +52,10 @@ const TrainingSection = () => {
           </p>
         </motion.div>
 
-        {/* F1 Car Visual */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="flex justify-center mb-12"
-        >
-          <img 
-            src={f1Car} 
-            alt="Acelera SaaS - Alta performance" 
-            className="w-full max-w-md h-auto object-contain drop-shadow-[0_0_30px_rgba(212,40,166,0.2)]"
-          />
-        </motion.div>
+      {/* F1 Car - background decorative */}
+      <div className="absolute -left-24 bottom-0 w-[500px] h-[250px] opacity-[0.06] pointer-events-none hidden lg:block">
+        <img src={f1Car} alt="" className="w-full h-full object-contain" />
+      </div>
 
         {/* Training Cards */}
         <motion.div

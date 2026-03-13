@@ -18,6 +18,11 @@ const HeroSection = () => {
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
       {/* Aurora Background */}
       <AuroraBackground />
+
+      {/* F1 Car - background decorative */}
+      <div className="absolute -right-20 bottom-0 w-[600px] h-[300px] opacity-[0.07] pointer-events-none hidden lg:block">
+        <img src={f1Car} alt="" className="w-full h-full object-contain" />
+      </div>
       
       {/* Bottom gradient fade to black */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent z-10 pointer-events-none" />
