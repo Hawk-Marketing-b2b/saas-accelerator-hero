@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Rocket, DollarSign } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
