@@ -1,29 +1,23 @@
-import { Users, DollarSign, TrendingUp, Award } from "lucide-react";
+import { Users, DollarSign, TrendingUp } from "lucide-react";
 
 const stats = [
   {
     icon: Users,
-    value: "348",
-    suffix: "+",
-    label: "Clientes turbinados"
+    value: "+400",
+    suffix: "",
+    label: "Saas Atendidos"
   },
   {
     icon: DollarSign,
-    value: "R$225",
-    suffix: "M",
-    label: "Faturamento gerado"
+    value: "+1",
+    suffix: " Bi",
+    label: "de Aumento em receita"
   },
   {
     icon: TrendingUp,
-    value: "R$41",
-    suffix: "MI+",
-    label: "Investido em crescimento"
-  },
-  {
-    icon: Award,
-    value: "400",
-    suffix: "+",
-    label: "Metodologia validada"
+    value: "+R$40",
+    suffix: " milhões",
+    label: "investidos em anúncios"
   }
 ];
 
@@ -32,7 +26,7 @@ const StatsSection = () => {
     <section className="py-[30px] md:py-20 px-4 bg-gradient-to-b from-black via-[#0a0a1a] to-black">
       <div className="container mx-auto max-w-6xl">
         {/* Badge */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-6 pt-8">
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-primary/10">
             <TrendingUp className="w-4 h-4 text-primary" />
             <span className="text-primary text-sm font-medium">Resultados Comprovados</span>
@@ -40,12 +34,12 @@ const StatsSection = () => {
         </div>
 
         {/* Title */}
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center heading-gradient mb-16">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-center heading-gradient mb-16 px-4">
           Alguns números de nossa aceleradora
         </h2>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
           {stats.map((stat, index) => (
             <div
               key={index}
