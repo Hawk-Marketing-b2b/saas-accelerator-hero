@@ -71,17 +71,6 @@ const HeroSection = () => {
             </ShinyButton>
           </div>
 
-          {/* F1 Car Image */}
-          <div 
-            className="w-full max-w-3xl mx-auto opacity-0 animate-fade-up pt-4"
-            style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
-          >
-            <img 
-              src={f1Car} 
-              alt="Acelera SaaS - Velocidade e performance" 
-              className="w-full h-auto object-contain drop-shadow-[0_0_40px_rgba(168,85,247,0.3)]"
-            />
-          </div>
         </div>
       </div>
 
