@@ -1,5 +1,6 @@
-import { Linkedin, Instagram, Youtube, Mail, Phone } from "lucide-react";
+import { Linkedin, Instagram, Youtube, Mail, MapPin } from "lucide-react";
 import logoAceleraSaas from "@/assets/logo-acelera-saas.png";
+import sedeImg from "@/assets/sede-uberlandia.jpg";
 
 const Footer = () => {
   const quickLinks = [
