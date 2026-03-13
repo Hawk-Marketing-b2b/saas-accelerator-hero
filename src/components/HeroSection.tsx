@@ -78,21 +78,6 @@ const HeroSection = () => {
             </ShinyButton>
           </div>
 
-          {/* Stats */}
-          <div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-3xl mx-auto pt-12 opacity-0 animate-fade-up w-full"
-            style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
-          >
-            {stats.map((stat, index) => (
-              <StatCard
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                icon={stat.icon}
-                delay={600 + index * 100}
-              />
-            ))}
-          </div>
         </div>
       </div>
 
