@@ -19,12 +19,6 @@ const csFeatures = [
   "Redução de churn",
 ];
 
-const stats = [
-  { icon: BookOpen, value: "400+ projetos", label: "Metodologia própria" },
-  { icon: Award, value: "Incluída", label: "Certificação" },
-  { icon: Zap, value: "90 dias", label: "Resultados em" },
-  { icon: BarChart3, value: "+45% conversão", label: "Aumento médio" },
-];
 
 const TrainingSection = () => {
   const [isCommercialDialogOpen, setIsCommercialDialogOpen] = useState(false);
