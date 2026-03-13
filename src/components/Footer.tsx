@@ -77,9 +77,11 @@ const Footer = () => {
               </li>
               <li className="flex items-start gap-2 text-white/60 text-sm">
                 <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
-                <span>Complexo Vinhedos, Uberlândia - MG</span>
+                <span>Complexo Vinhedos, Sala 1508<br />Uberlândia - MG, CEP 38411-159</span>
               </li>
             </ul>
+            <p className="text-white/40 text-xs mb-1">Hawk Comunicacao LTDA</p>
+            <p className="text-white/40 text-xs mb-4">CNPJ 19.247.670/0001-35</p>
             <div className="rounded-xl overflow-hidden border border-white/10">
               <img 
                 src={sedeImg} 
