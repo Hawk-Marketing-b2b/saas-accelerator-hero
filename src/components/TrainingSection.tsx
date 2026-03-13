@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Target, Heart, BookOpen, Award, Zap, BarChart3, ArrowRight } from "lucide-react";
+import { Target, Heart, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
 import ShinyButton from "./ui/shiny-button";
