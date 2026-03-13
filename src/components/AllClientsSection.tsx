@@ -21,7 +21,7 @@ const AllClientsSection = () => {
             <img 
               src={allClientsGrid} 
               alt="Clientes SaaS atendidos: cVortex, Arco, SmartGo, Hakai, Bionexo, Nola, Recepção Inteligente, Jimmy Chat, Fretatech, Atomic Agro, aGrow, Fieldy, GEP Costdrivers, Ellevo, AtendeBot, Onlineclinic, MktZap, ISL Online, Doc24"
-              className="w-full h-auto object-contain invert opacity-80"
+              className="w-full h-auto object-contain"
             />
           </div>
         </motion.div>
