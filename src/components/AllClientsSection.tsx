@@ -4,7 +4,7 @@ import allClientsGrid from "@/assets/clients/all-clients-grid-new.png";
 const AllClientsSection = () => {
   return (
     <section className="py-4 md:py-6 px-4 bg-black">
-      <div className="container mx-auto max-w-5xl">
+      <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
