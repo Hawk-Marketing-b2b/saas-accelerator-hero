@@ -30,7 +30,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="/" className="flex items-center">
-            <img src={logoAceleraSaas} alt="Acelera SaaS" className="h-32 w-auto" />
+            <img src={logoAceleraSaas} alt="Acelera SaaS" className="h-14 lg:h-16 w-auto" />
           </a>
 
           {/* Navigation */}
