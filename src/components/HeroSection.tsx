@@ -1,4 +1,4 @@
-import { ArrowRight, Calendar, Rocket, DollarSign } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
@@ -8,18 +8,11 @@ import {
   DialogTitle,
 } from "@/components/ui/dialog";
 import { ShinyButton } from "@/components/ui/shiny-button";
-import StatCard from "./StatCard";
 import ContactForm from "./ContactForm";
 import AuroraBackground from "./AuroraBackground";
 
 const HeroSection = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
-
-  const stats = [
-    { value: "+20", label: "anos de mercado", icon: Calendar },
-    { value: "+400", label: "softwares acelerados", icon: Rocket },
-    { value: "+730M", label: "em receita gerada", icon: DollarSign },
-  ];
 
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-black">
@@ -78,21 +71,6 @@ const HeroSection = () => {
             </ShinyButton>
           </div>
 
-          {/* Stats */}
-          <div 
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 max-w-3xl mx-auto pt-12 opacity-0 animate-fade-up w-full"
-            style={{ animationDelay: '500ms', animationFillMode: 'forwards' }}
-          >
-            {stats.map((stat, index) => (
-              <StatCard
-                key={stat.label}
-                value={stat.value}
-                label={stat.label}
-                icon={stat.icon}
-                delay={600 + index * 100}
-              />
-            ))}
-          </div>
         </div>
       </div>
 

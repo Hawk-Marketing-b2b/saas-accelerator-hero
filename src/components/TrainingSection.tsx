@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Target, Heart, BookOpen, Award, Zap, BarChart3, ArrowRight } from "lucide-react";
+import { Target, Heart, ArrowRight } from "lucide-react";
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/ui/dialog";
 import ContactForm from "./ContactForm";
 import ShinyButton from "./ui/shiny-button";
@@ -19,12 +19,6 @@ const csFeatures = [
   "Redução de churn",
 ];
 
-const stats = [
-  { icon: BookOpen, value: "400+ projetos", label: "Metodologia própria" },
-  { icon: Award, value: "Incluída", label: "Certificação" },
-  { icon: Zap, value: "90 dias", label: "Resultados em" },
-  { icon: BarChart3, value: "+45% conversão", label: "Aumento médio" },
-];
 
 const TrainingSection = () => {
   const [isCommercialDialogOpen, setIsCommercialDialogOpen] = useState(false);
@@ -138,30 +132,6 @@ const TrainingSection = () => {
           </div>
         </motion.div>
 
-        {/* Stats Bar */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, ease: "easeOut", delay: 0.4 }}
-          viewport={{ once: true, margin: "-100px" }}
-          className="rounded-2xl border border-white/10 bg-white/[0.02] backdrop-blur-sm p-8"
-        >
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
-            {stats.map((stat) => (
-              <div key={stat.label} className="text-center">
-                <div className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 border border-white/10 flex items-center justify-center mx-auto mb-3 md:mb-4">
-                  <stat.icon className="w-4 h-4 md:w-5 md:h-5 text-primary" />
-                </div>
-                <div className="text-lg md:text-2xl font-bold text-foreground mb-1">
-                  {stat.value}
-                </div>
-                <div className="text-xs md:text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
 
       {/* Commercial Dialog */}
