@@ -1,29 +1,23 @@
-import { Users, DollarSign, TrendingUp, Award } from "lucide-react";
+import { Users, DollarSign, TrendingUp } from "lucide-react";
 
 const stats = [
   {
     icon: Users,
-    value: "348",
-    suffix: "+",
-    label: "Clientes turbinados"
+    value: "+400",
+    suffix: "",
+    label: "Saas Atendidos"
   },
   {
     icon: DollarSign,
-    value: "R$225",
-    suffix: "M",
-    label: "Faturamento gerado"
+    value: "+1",
+    suffix: " Bi",
+    label: "de Aumento em receita"
   },
   {
     icon: TrendingUp,
-    value: "R$41",
-    suffix: "MI+",
-    label: "Investido em crescimento"
-  },
-  {
-    icon: Award,
-    value: "400",
-    suffix: "+",
-    label: "Metodologia validada"
+    value: "+R$40",
+    suffix: " milhões",
+    label: "investidos em anúncios"
   }
 ];
 
