@@ -3,21 +3,6 @@ import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-const BLOCKED_DOMAINS = [
-  "gmail.com", "yahoo.com", "yahoo.com.br", "hotmail.com", "hotmail.com.br",
-  "outlook.com", "outlook.com.br", "live.com", "aol.com", "protonmail.com",
-  "zoho.com", "mail.com", "gmx.com", "yandex.com", "tutanota.com",
-  "fastmail.com", "uol.com.br", "bol.com.br", "terra.com.br", "ig.com.br",
-  "globo.com", "r7.com", "zipmail.com.br",
-];
-
-const isBusinessEmail = (email: string): boolean => {
-  const domain = email.split("@")[1]?.toLowerCase();
-  if (!domain) return false;
-  // iCloud is allowed
-  if (domain === "icloud.com") return true;
-  return !BLOCKED_DOMAINS.includes(domain);
-};
 
 interface ContactFormProps {
   onSuccess?: () => void;
@@ -67,10 +52,6 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!isBusinessEmail(formData.email)) {
-      setEmailError("Por favor, utilize um e-mail corporativo.");
-      return;
-    }
     setEmailError("");
     setIsLoading(true);
 
