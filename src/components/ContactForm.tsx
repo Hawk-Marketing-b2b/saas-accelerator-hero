@@ -52,10 +52,6 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!isBusinessEmail(formData.email)) {
-      setEmailError("Por favor, utilize um e-mail corporativo.");
-      return;
-    }
     setEmailError("");
     setIsLoading(true);
 
