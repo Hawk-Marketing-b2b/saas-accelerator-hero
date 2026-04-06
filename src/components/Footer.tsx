@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, Youtube, Mail, MapPin } from "lucide-react";
+import { Instagram, Mail, MapPin } from "lucide-react";
 import logoAceleraSaas from "@/assets/logo-acelera-saas.png";
 import sedeImg from "@/assets/sede-uberlandia.jpg";
 
@@ -12,9 +12,7 @@ const Footer = () => {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "https://linkedin.com", label: "LinkedIn" },
-    { icon: Instagram, href: "https://www.instagram.com/acelerasaas/", label: "Instagram" },
-    { icon: Youtube, href: "https://youtube.com", label: "YouTube" }
+    { icon: Instagram, href: "https://www.instagram.com/acelerasaas/", label: "Instagram" }
   ];
 
   return (
