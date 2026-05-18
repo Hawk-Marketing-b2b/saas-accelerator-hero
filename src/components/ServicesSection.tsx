@@ -44,16 +44,18 @@ const ServicesSection = () => {
     <section className="relative py-24 px-4 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(283_76%_54%_/_0.05)_0%,_transparent_70%)] pointer-events-none" />
 
-      <div className="max-w-6xl mx-auto relative">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-muted/30 backdrop-blur-sm mb-6">
-          <span className="text-sm text-muted-foreground">Nossos Serviços</span>
+      <div className="max-w-6xl mx-auto relative text-center">
+        <div className="flex justify-center mb-6">
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-border/50 bg-muted/30 backdrop-blur-sm">
+            <span className="text-sm text-muted-foreground">Nossos Serviços</span>
+          </div>
         </div>
 
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold heading-gradient mb-4">
           Tudo que seu SaaS precisa para crescer
         </h2>
 
-        <p className="text-muted-foreground text-lg max-w-2xl mb-16">
+        <p className="text-muted-foreground text-lg max-w-2xl mb-16 mx-auto">
           Do marketing à automação — soluções integradas para acelerar suas vendas B2B.
         </p>
 
