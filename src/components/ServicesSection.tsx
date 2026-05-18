@@ -41,7 +41,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section className="relative py-24 px-4 bg-background overflow-hidden">
+    <section id="servicos" className="relative py-24 px-4 bg-background overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_hsl(283_76%_54%_/_0.05)_0%,_transparent_70%)] pointer-events-none" />
 
       <div className="max-w-6xl mx-auto relative text-center">
