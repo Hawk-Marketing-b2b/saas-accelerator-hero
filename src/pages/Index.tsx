@@ -91,7 +91,7 @@ const Index = () => {
                 </button>
 
                 {/* Cards */}
-                <div className="flex items-center gap-4 w-full max-w-4xl overflow-hidden">
+                <div className="flex items-center gap-4 w-full max-w-4xl py-4">
                   {[-1, 0, 1].map((offset) => {
                     const s = services[getIndex(offset)];
                     const isCenter = offset === 0;
