@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Monitor, Briefcase, Users, Zap, Target, TrendingUp, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Monitor, Briefcase, Users, Zap, Target, TrendingUp } from "lucide-react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AllClientsSection from "@/components/AllClientsSection";
@@ -118,11 +118,6 @@ const Index = () => {
                             {s.desc}
                           </p>
                         </div>
-                        {isCenter && (
-                          <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-purple-light">
-                            Saiba mais <ArrowRight className="size-4" />
-                          </span>
-                        )}
                       </a>
                     );
                   })}
