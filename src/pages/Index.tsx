@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { ChevronLeft, ChevronRight, Monitor, Briefcase, Users, Zap, Target, TrendingUp, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Monitor, Briefcase, Users, Zap, Target, TrendingUp } from "lucide-react";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import AllClientsSection from "@/components/AllClientsSection";
