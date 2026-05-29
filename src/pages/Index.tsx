@@ -120,7 +120,6 @@ const Index = () => {
                         </div>
                         {isCenter && (
                           <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-purple-light">
-                            Saiba mais <ArrowRight className="size-4" />
                           </span>
                         )}
                       </a>
