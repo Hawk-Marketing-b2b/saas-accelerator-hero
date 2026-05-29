@@ -118,10 +118,6 @@ const Index = () => {
                             {s.desc}
                           </p>
                         </div>
-                        {isCenter && (
-                          <span className="mt-auto inline-flex items-center gap-1.5 text-sm font-medium text-purple-light">
-                          </span>
-                        )}
                       </a>
                     );
                   })}
