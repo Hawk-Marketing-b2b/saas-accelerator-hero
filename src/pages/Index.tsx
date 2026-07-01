@@ -113,7 +113,7 @@ const Index = () => {
                             <Icon className={`size-5 ${isCenter ? "text-primary-foreground" : "text-muted-foreground"}`} />
                           </div>
                           <div>
-                            <h3 className={`font-display text-lg font-semibold mb-2pc™ ${isCenter ? "text-foreground" : "text-muted-foreground"}`}>
+                            <h3 className={`font-display text-lg font-semibold mb-2 ${isCenter ? "text-foreground" : "text-muted-foreground"}`}>
                               {s.title}
                             </h3>
                             <p className={`text-sm leading-relaxed ${isCenter ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
