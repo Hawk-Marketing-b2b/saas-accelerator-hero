@@ -81,40 +81,77 @@ const Index = () => {
               (active + offset + services.length) % services.length;
 
             return (
-              <div className="relative flex items-center justify-center gap-4">
-                {/* Left arrow */}
-                <button
-                  onClick={prev}
-                  className="shrink-0 z-10 grid size-12 place-items-center rounded-full border border-border/60 bg-card/60 text-muted-foreground backdrop-blur transition-all duration-200 hover:border-primary/60 hover:text-foreground hover:scale-110"
-                >
-                  <ChevronLeft className="size-5" />
-                </button>
+              <>
+                {/* Desktop slider */}
+                <div className="relative hidden md:flex items-center justify-center gap-4">
+                  {/* Left arrow */}
+                  <button
+                    onClick={prev}
+                    className="shrink-0 z-10 grid size-12 place-items-center rounded-full border border-border/60 bg-card/60 text-muted-foreground backdrop-blur transition-all duration-200 hover:border-primary/60 hover:text-foreground hover:scale-110"
+                  >
+                    <ChevronLeft className="size-5" />
+                  </button>
 
-                {/* Cards */}
-                <div className="flex items-center gap-4 w-full max-w-4xl py-4">
-                  {[-1, 0, 1].map((offset) => {
-                    const s = services[getIndex(offset)];
-                    const isCenter = offset === 0;
+                  {/* Cards */}
+                  <div className="flex items-center gap-4 w-full max-w-4xl py-4">
+                    {[-1, 0, 1].map((offset) => {
+                      const s = services[getIndex(offset)];
+                      const isCenter = offset === 0;
+                      const Icon = s.icon;
+                      return (
+                        <a
+                          key={getIndex(offset)}
+                          href={s.href}
+                          className={`flex-1 min-w-0 card-glass rounded-2xl p-7 flex flex-col gap-4 transition-all duration-500 cursor-pointer
+                            ${isCenter
+                              ? "scale-105 border-primary/40 shadow-[0_4px_40px_-4px_hsl(283_76%_54%_/_0.35)] opacity-100"
+                              : "scale-95 opacity-50 hover:opacity-70"
+                            }`}
+                        >
+                          <div className={`grid size-12 place-items-center rounded-xl transition-all duration-300
+                            ${isCenter ? "bg-gradient-button shadow-button" : "bg-muted/60"}`}>
+                            <Icon className={`size-5 ${isCenter ? "text-primary-foreground" : "text-muted-foreground"}`} />
+                          </div>
+                          <div>
+                            <h3 className={`font-display text-lg font-semibold mb-2 ${isCenter ? "text-foreground" : "text-muted-foreground"}`}>
+                              {s.title}
+                            </h3>
+                            <p className={`text-sm leading-relaxed ${isCenter ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
+                              {s.desc}
+                            </p>
+                          </div>
+                        </a>
+                      );
+                    })}
+                  </div>
+
+                  {/* Right arrow */}
+                  <button
+                    onClick={next}
+                    className="shrink-0 z-10 grid size-12 place-items-center rounded-full border border-border/60 bg-card/60 text-muted-foreground backdrop-blur transition-all duration-200 hover:border-primary/60 hover:text-foreground hover:scale-110"
+                  >
+                    <ChevronRight className="size-5" />
+                  </button>
+                </div>
+
+                {/* Mobile stacked cards */}
+                <div className="flex md:hidden flex-col gap-4">
+                  {services.map((s, i) => {
                     const Icon = s.icon;
                     return (
                       <a
-                        key={getIndex(offset)}
+                        key={i}
                         href={s.href}
-                        className={`flex-1 min-w-0 card-glass rounded-2xl p-7 flex flex-col gap-4 transition-all duration-500 cursor-pointer
-                          ${isCenter
-                            ? "scale-105 border-primary/40 shadow-[0_4px_40px_-4px_hsl(283_76%_54%_/_0.35)] opacity-100"
-                            : "scale-95 opacity-50 hover:opacity-70"
-                          }`}
+                        className="card-glass rounded-2xl p-7 flex flex-col gap-4 transition-all duration-300 cursor-pointer border-primary/20 hover:border-primary/40 hover:shadow-[0_4px_40px_-4px_hsl(283_76%_54%_/_0.2)]"
                       >
-                        <div className={`grid size-12 place-items-center rounded-xl transition-all duration-300
-                          ${isCenter ? "bg-gradient-button shadow-button" : "bg-muted/60"}`}>
-                          <Icon className={`size-5 ${isCenter ? "text-primary-foreground" : "text-muted-foreground"}`} />
+                        <div className="grid size-12 place-items-center rounded-xl bg-gradient-button shadow-button">
+                          <Icon className="size-5 text-primary-foreground" />
                         </div>
                         <div>
-                          <h3 className={`font-display text-lg font-semibold mb-2 ${isCenter ? "text-foreground" : "text-muted-foreground"}`}>
+                          <h3 className="font-display text-lg font-semibold mb-2 text-foreground">
                             {s.title}
                           </h3>
-                          <p className={`text-sm leading-relaxed ${isCenter ? "text-muted-foreground" : "text-muted-foreground/50"}`}>
+                          <p className="text-sm leading-relaxed text-muted-foreground">
                             {s.desc}
                           </p>
                         </div>
@@ -122,15 +159,7 @@ const Index = () => {
                     );
                   })}
                 </div>
-
-                {/* Right arrow */}
-                <button
-                  onClick={next}
-                  className="shrink-0 z-10 grid size-12 place-items-center rounded-full border border-border/60 bg-card/60 text-muted-foreground backdrop-blur transition-all duration-200 hover:border-primary/60 hover:text-foreground hover:scale-110"
-                >
-                  <ChevronRight className="size-5" />
-                </button>
-              </div>
+              </>
             );
           })()}
         </div>
