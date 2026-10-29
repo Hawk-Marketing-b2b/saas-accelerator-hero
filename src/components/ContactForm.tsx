@@ -82,6 +82,11 @@ const ContactForm = ({ onSuccess }: ContactFormProps) => {
         body: payload.toString(),
       });
 
+      if (typeof window !== "undefined" && window.fbq) {
+        const eventID = `lead_${Date.now()}_${Math.random().toString(36).slice(2, 10)}`;
+        window.fbq("track", "Lead", {}, { eventID });
+      }
+
       toast({
         title: "Enviado com sucesso!",
         description: "Em breve um especialista entrará em contato.",
